@@ -12,7 +12,7 @@ const Navbar = () => {
     width: '15%',
     backgroundColor: '#4C6663',
     position: 'fixed',
-    height: '92%',
+    height: '94%',
     zIndex: 1000,
     margin: '2% 0 2% 2%',
     display: 'flex',
