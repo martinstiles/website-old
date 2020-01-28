@@ -15,15 +15,18 @@ function App() {
     width: '100%',
     height: '100%',
     opacity: '0.8',
-    zIndex: 100,
+    zIndex: 1,
     position: 'absolute',
     background: 'black'
   }
 
+
   return (
-    <div style={style}>
-      <img style={imageStyle} src={Background} alt='' />
-      <div><Navbar /></div>
+    <div>
+      <div style={style}>
+        <img style={imageStyle} src={Background} alt='' />
+      </div>
+      <Navbar />
     </div>
   );
 }

@@ -1,16 +1,14 @@
 import React from 'react'
-import Background from '../media/Background.JPG'
 
 const Home = () => {
-	const style = {
-		maxWidth: '100%',
-		maxHeight: '100%',
-		opacity: '0.8',
-		zIndex: -100,
+	const container = {
+		margiRight: '40%',
+		marginLeft: '40%',
+		zIndex: 3
 	}
 	return (
-		<div>
-			<img style={style} src={Background} alt='' />
+		<div style={container}>
+			<h1>MARTIN STILES</h1>
 		</div>
 	)
 }
