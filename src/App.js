@@ -8,7 +8,8 @@ import Background from './media/Background.JPG'
 function App() {
   // background: '#4C6663'
   const style = {
-    background: '#000000'
+    background: '#000000',
+    alignItems: 'center'
   }
 
   const imageStyle = {
@@ -22,8 +23,8 @@ function App() {
 
 
   return (
-    <div>
-      <div style={style}>
+    <div style={style}>
+      <div>
         <img style={imageStyle} src={Background} alt='' />
       </div>
       <Navbar />
