@@ -1,5 +1,8 @@
-.App {
-  margin: 0;
+/* Functions that can't be (?) defined with inline JS */
+
+.navbarGradient {
+  /* background: linear-gradient(90deg, #4C6663 0%, rgb(6, 99, 88) 50%, #4C6663 100%); */
+  background: linear-gradient(90deg, rgb(17, 68, 62) 0%, rgb(65, 95, 92) 100%);
 }
 
 

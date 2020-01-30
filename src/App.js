@@ -8,7 +8,7 @@ import Background from './media/Background.JPG'
 function App() {
   // background: '#4C6663'
   const style = {
-    background: '#000000',
+    background: '#ffffff',
     alignItems: 'center'
   }
 
@@ -28,6 +28,7 @@ function App() {
         <img style={imageStyle} src={Background} alt='' />
       </div>
       <Navbar />
+      <Home />
     </div>
   );
 }
