@@ -3,15 +3,21 @@ import React from 'react'
 const Home = () => {
 	const container = {
 		position: 'fixed',
+		width: '40%',
 		marginTop: '12%',
-		margiRight: '40%',
-		marginLeft: '40%',
+		margiRight: 'auto',
+		marginLeft: '30%',
 		zIndex: 3,
-		color: '#8F7E4F'
+		textAlign: 'center',
+		alignItems: 'center',
+		fontWeight: 'bold'
 	}
 
 	return (
-		<h1 style={container}>MARTIN STILES</h1>
+		<div style={container}>
+			<h1 style={{fontSize: '5vw'}}> MARTIN STILES </h1>
+			<p style={{fontSize: '1.5vw'}}> Web developer. Tech enthusiast. Friendly neighborhood spiderman.</p>
+		</div>
 	)
 }
 

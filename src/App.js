@@ -8,7 +8,7 @@ import Background from './media/Background.JPG'
 function App() {
   // background: '#4C6663'
   const style = {
-    background: '#ffffff',
+    background: 'black',
     alignItems: 'center'
   }
 
