@@ -1,24 +1,25 @@
 import React from 'react'
 
+// height 50% ??
 const Home = () => {
 	const container = {
 		position: 'absolute',
 		width: '50%',
-		marginTop: '12%',
+		marginTop: '15%',
 		margiRight: 'auto',
-		marginLeft: '30%',
+		marginLeft: '25%',
 		zIndex: 3,
 		textAlign: 'center',
 		alignItems: 'center',
 		fontWeight: 'bold',
-		backgroundColor: `rgb(${[0,0,0,0.7]})`,
+		backgroundColor: '#4C6663',
 		borderRadius: '15px'
 	}
 
 	return (
 		<div style={container}>
-			<h1 style={{fontSize: '5vw', color: 'white', opacity: 1}}> MARTIN STILES </h1>
-			<p style={{fontSize: '1.5vw', color: 'white', margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Friendly neighborhood spiderman.</p>
+			<h1 style={{fontSize: '5vw', color: 'black', opacity: 1}}> MARTIN STILES </h1>
+			<p style={{fontSize: '1.5vw', color: 'black', margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Friendly neighborhood spiderman.</p>
 		</div>
 	)
 }
