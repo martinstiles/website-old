@@ -22,8 +22,9 @@ const Navbar = () => {
     textAlign: 'center',
     justifyContent: 'space-between',
     fontFamily: 'Acme, cursive',
-    color: 'black',
-    borderRadius: '15px'
+    color: 'white',
+    borderRadius: '15px',
+    backgroundColor: `rgb(${[10,10,10,0.7]})`,
   }
   const horizontalStyle = {
     width: '96%',
@@ -33,7 +34,9 @@ const Navbar = () => {
     margin: '2% 2% 0 2%',
     display: 'grid',
     gridTemplateColumns: '60% 40%',
-    fontFamily: 'Acme, cursive'
+    fontFamily: 'Acme, cursive',
+    borderStyle: 'solid',
+    borderRadius: '15px',
   }
 
   // Header style
@@ -72,11 +75,11 @@ const Navbar = () => {
 
   // Noe i denne dur? onHover={() => style={scale: 1.1}}
   return (
-    <div style={currentPage === 'home' ? verticalStyle : horizontalStyle} className='navbarGradient'>
+    <div style={currentPage === 'home' ? verticalStyle : horizontalStyle}>
         <h1 style={isHome ? verticalHeader : horizontalHeader}> {currentPage.toUpperCase()} </h1>
 
         <ButtonGroup orientation={isHome ? 'vertical' : 'horisontal'} color="inherit" size='large'>
-          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'home'} onClick={() => onLinkClick('home')}> Home </Button>
+          { isHome || <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'home'} onClick={() => onLinkClick('home')}> Home </Button> }
           <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'about'} onClick={() => onLinkClick('about')}> About </Button>
           <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'portfolio'} onClick={() => onLinkClick('portfolio')}> Portfolio </Button>
           <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'blog'} onClick={() => onLinkClick('blog')}> Blog </Button>
@@ -84,9 +87,9 @@ const Navbar = () => {
 
         { isHome &&
           <div style={footer}>
-            <Link style={{color: 'black'}} target="_blank" href='https://www.facebook.com/martin.stiles.9'> <FacebookIcon style={iconStyle}/> </Link>
-            <Link style={{color: 'black', margin: '0 10% 0 10%'}} target="_blank" href='https://www.linkedin.com/in/martin-stiles-39b662171/'> <LinkedInIcon style={iconStyle} /> </Link>
-            <Link style={{color: 'black'}} target="_blank" href='https://www.instagram.com/msstiles/'> <InstagramIcon style={iconStyle}/> </Link>
+            <Link style={{color: 'white'}} target="_blank" href='https://www.facebook.com/martin.stiles.9'> <FacebookIcon style={iconStyle}/> </Link>
+            <Link style={{color: 'white', margin: '0 10% 0 10%'}} target="_blank" href='https://www.linkedin.com/in/martin-stiles-39b662171/'> <LinkedInIcon style={iconStyle} /> </Link>
+            <Link style={{color: 'white'}} target="_blank" href='https://www.instagram.com/msstiles/'> <InstagramIcon style={iconStyle}/> </Link>
           </div>
         }
     </div>
