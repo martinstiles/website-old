@@ -7,7 +7,7 @@ const Home = () => {
 		width: '50%',
 		marginTop: '15%',
 		margiRight: 'auto',
-		marginLeft: '25%',
+		marginLeft: '34%',
 		zIndex: 3,
 		textAlign: 'center',
 		alignItems: 'center',

@@ -12,7 +12,7 @@ import '../App.css'
 const Navbar = () => {
   // Different styles for vertical/horizontal navbar
   const verticalStyle = {
-    width: '17%',
+    width: '16%',
     height: '92%',
     position: 'fixed',
     zIndex: 2,
@@ -21,7 +21,7 @@ const Navbar = () => {
     flexDirection: 'column',
     textAlign: 'center',
     justifyContent: 'space-between',
-    fontFamily: 'Raleway, cursive',
+    fontFamily: 'Acme, cursive',
     color: 'black',
     borderRadius: '15px'
   }
@@ -33,25 +33,27 @@ const Navbar = () => {
     margin: '2% 2% 0 2%',
     display: 'grid',
     gridTemplateColumns: '60% 40%',
-    fontFamily: 'Raleway, cursive'
+    fontFamily: 'Acme, cursive'
   }
 
   // Header style
   const verticalHeader = {
     marginTop: '3vw',
-    fontSize: '2.5vw',
+    fontSize: '3.5vw',
     fontWeight: 'bold'
   }
   const horizontalHeader = {
-    fontSize: '2.5vw',
+    fontSize: '3vw',
     fontWeight: 'bold',
     gridColumn: 1,
     justifySelf: 'left',
-    marginLeft: '8vw'
+    marginLeft: '3vw'
   }
 
+  const midFontSize = {fontSize: '2.2vw'}
+
   // Footer style
-  const verticalFooter = {marginBottom: '3vw'}
+  const footer = {marginBottom: '3vw'}
   const iconStyle = {width: '1.7em', height: '1.7em'}
 
   const [currentPage, setCurrentPage] = useState('home')
@@ -74,14 +76,14 @@ const Navbar = () => {
         <h1 style={isHome ? verticalHeader : horizontalHeader}> {currentPage.toUpperCase()} </h1>
 
         <ButtonGroup orientation={isHome ? 'vertical' : 'horisontal'} color="inherit" size='large'>
-          <Button style={{fontSize: '2em'}} variant='text' color='inherit' disabled={currentPage === 'home'} onClick={() => onLinkClick('home')}> Home </Button>
-          <Button style={{fontSize: '2em'}} variant='text' color='inherit' disabled={currentPage === 'about'} onClick={() => onLinkClick('about')}> About </Button>
-          <Button style={{fontSize: '2em'}} variant='text' color='inherit' disabled={currentPage === 'portfolio'} onClick={() => onLinkClick('portfolio')}> Portfolio </Button>
-          <Button style={{fontSize: '2em'}} variant='text' color='inherit' disabled={currentPage === 'blog'} onClick={() => onLinkClick('blog')}> Blog </Button>
+          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'home'} onClick={() => onLinkClick('home')}> Home </Button>
+          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'about'} onClick={() => onLinkClick('about')}> About </Button>
+          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'portfolio'} onClick={() => onLinkClick('portfolio')}> Portfolio </Button>
+          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'blog'} onClick={() => onLinkClick('blog')}> Blog </Button>
         </ButtonGroup>
 
         { isHome &&
-          <div style={verticalFooter}>
+          <div style={footer}>
             <Link style={{color: 'black'}} target="_blank" href='https://www.facebook.com/martin.stiles.9'> <FacebookIcon style={iconStyle}/> </Link>
             <Link style={{color: 'black', margin: '0 10% 0 10%'}} target="_blank" href='https://www.linkedin.com/in/martin-stiles-39b662171/'> <LinkedInIcon style={iconStyle} /> </Link>
             <Link style={{color: 'black'}} target="_blank" href='https://www.instagram.com/msstiles/'> <InstagramIcon style={iconStyle}/> </Link>
