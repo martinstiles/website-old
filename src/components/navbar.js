@@ -34,7 +34,7 @@ const Navbar = () => {
 
   // Header style
   const verticalHeader = {
-    marginTop: '10%',
+    marginTop: '3vw',
     fontSize: '2.5vw',
     fontWeight: 'bold'
   }
@@ -57,19 +57,13 @@ const Navbar = () => {
     flexDirection: 'row',
     justifyContent: 'space-between',
     gridColumn: 2,
-    justifySelf: 'right',
+    justifySelf: 'stretch',
     marginRight: '10vw'
   }
 
   // Footer style
   const verticalFooter = {
-    marginBottom: '10%'
-  }
-  const horizontalFooter = {
-    display: 'flex',
-    flexDirection: 'row',
-    gridColumn: 3,
-    justifySelf: 'stretch'
+    marginBottom: '3vw'
   }
 
   const [currentPage, setCurrentPage] = useState('home')
@@ -93,13 +87,13 @@ const Navbar = () => {
 
         <div style={isHome ? verticalMidSection : horizonalMidSection}>
           <Link color='black' component="button" variant={midFontSize} onClick={() => onLinkClick('home')} disabled={currentPage === 'home'} underline={currentPage === 'home' ? 'none' : 'hover'} > Home </Link>
-          <Link style={{marginLeft: '2vw', marginRight: '1vw'}} color='black' component="button" variant={midFontSize} onClick={() => onLinkClick('about')} disabled={currentPage === 'about'} underline={currentPage === 'about' ? 'none' : 'hover'} > About </Link>
-          <Link style={{marginLeft: '1vw', marginRight: '2vw'}} color='black' component="button" variant={midFontSize} onClick={() => onLinkClick('portfolio')} disabled={currentPage === 'portfolio'} underline={currentPage === 'portfolio' ? 'none' : 'hover'}> Portfolio </Link>
-          <Link color='black' component="button" variant={midFontSize} onClick={() => onLinkClick('blog')} disabled={currentPage === 'blog'} underline={currentPage === '' ? 'none' : 'hover'}> Blog </Link>
+          <Link color='black' component="button" variant={midFontSize} onClick={() => onLinkClick('about')} disabled={currentPage === 'about'} underline={currentPage === 'about' ? 'none' : 'hover'} > About </Link>
+          <Link color='black' component="button" variant={midFontSize} onClick={() => onLinkClick('portfolio')} disabled={currentPage === 'portfolio'} underline={currentPage === 'portfolio' ? 'none' : 'hover'}> Portfolio </Link>
+          <Link color='black' component="button" variant={midFontSize} onClick={() => onLinkClick('blog')} disabled={currentPage === 'blog'} underline={currentPage === 'blog' ? 'none' : 'hover'}> Blog </Link>
         </div>
 
         { isHome &&
-          <div style={isHome ? verticalFooter : horizontalFooter}>
+          <div style={verticalFooter}>
             <Link style={{color: 'black', fontSize: '50px'}} target="_blank" href='https://www.facebook.com/martin.stiles.9'><FacebookIcon/></Link>
             <Link style={{color: 'black', margin: '0 10% 0 10%'}} target="_blank" href='https://www.linkedin.com/in/martin-stiles-39b662171/'> <LinkedInIcon /> </Link>
             <Link style={{color: 'black'}} target="_blank" href='https://www.instagram.com/msstiles/'> <InstagramIcon /> </Link>
