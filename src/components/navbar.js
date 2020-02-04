@@ -9,7 +9,7 @@ import InstagramIcon from '@material-ui/icons/Instagram'
 import '../App.css'
 
 // Can use useMemo here, and make it update when the global value "activePage" changes (implemented eventually)
-const Navbar = () => {
+const Navbar = ({setPageInParent}) => {
   // Different styles for vertical/horizontal navbar
   const verticalStyle = {
     width: '16%',
@@ -64,6 +64,7 @@ const Navbar = () => {
   const onLinkClick = (page) => {
     setCurrentPage(page)
     setIsHome(page === 'home')
+    setPageInParent(page)
   }
 
   // TODO:
