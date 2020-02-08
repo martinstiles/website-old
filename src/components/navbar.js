@@ -34,6 +34,7 @@ const Navbar = ({setPageInParent}) => {
     margin: '2% 2% 0 2%',
     display: 'grid',
     gridTemplateColumns: '60% 40%',
+    gridTemplateRows: '100%', 
     fontFamily: 'Acme, cursive',
     borderStyle: 'solid',
     borderRadius: '15px',
@@ -49,15 +50,17 @@ const Navbar = ({setPageInParent}) => {
     fontSize: '3vw',
     fontWeight: 'bold',
     gridColumn: 1,
+    gridRow: 1,
     justifySelf: 'left',
-    marginLeft: '3vw'
+    marginLeft: '3vw',
+    top: '0'
   }
 
   const midFontSize = {fontSize: '2.2vw'}
 
   // Footer style
   const footer = {marginBottom: '3vw'}
-  const iconStyle = {width: '1.7em', height: '1.7em'}
+  const iconStyle = {width: '3vw', height: '3vw'}
 
   const [currentPage, setCurrentPage] = useState('home')
   const [isHome, setIsHome] = useState(true)
@@ -79,7 +82,7 @@ const Navbar = ({setPageInParent}) => {
     <div style={currentPage === 'home' ? verticalStyle : horizontalStyle}>
         <h1 style={isHome ? verticalHeader : horizontalHeader}> {currentPage.toUpperCase()} </h1>
 
-        <ButtonGroup orientation={isHome ? 'vertical' : 'horisontal'} color="inherit" size='large'>
+        <ButtonGroup style={{gridRow: 1, gridColumn: 2}} orientation={isHome ? 'vertical' : 'horisontal'} color="inherit" size='large'>
           { isHome || <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'home'} onClick={() => onLinkClick('home')}> Home </Button> }
           <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'about'} onClick={() => onLinkClick('about')}> About </Button>
           <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'portfolio'} onClick={() => onLinkClick('portfolio')}> Portfolio </Button>

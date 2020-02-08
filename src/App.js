@@ -10,8 +10,7 @@ import Background from './media/Background.JPG'
 function App() {
   // background: '#4C6663'
   const style = {
-    background: 'black',
-    alignItems: 'center'
+    alignItems: 'center',
   }
 
   // TODO: PROBLEM MED ABSOLUTE IMAGE?
@@ -21,7 +20,6 @@ function App() {
     opacity: '0.9',
     zIndex: -1,
     position: 'absolute',
-    background: 'black',
   }
 
   // Poor solution, but it works for now
