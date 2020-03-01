@@ -11,26 +11,28 @@ function App() {
   // background: '#4C6663'
   const style = {
     alignItems: 'center',
+    //backgroundImage: `url(${Background})`,
+    width: '100%',
+    height: '100%'
   }
 
   // TODO: PROBLEM MED ABSOLUTE IMAGE?
   const imageStyle = {
     width: '100%',
     height: '100%',
-    opacity: '0.9',
+    opacity: '1',
     zIndex: -1,
     position: 'absolute',
   }
 
-  // Poor solution, but it works for now
+  // Poor solution? but it works for now
   const [currentPage, setCurrentPage] = useState('home')
   const getPageFromChild = (page) => {
     setCurrentPage(page)
   }
-  console.log(currentPage)
 
   return (
-    <div style={style}>
+    <div style={style} className='app'>
       <div>
         <img style={imageStyle} src={Background} alt='' />
       </div>

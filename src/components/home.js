@@ -1,25 +1,30 @@
 import React from 'react'
+import './animations/fadeIn.css'
 
 // height 50% ??
 const Home = () => {
+	const fontColor = '#101010'
+
+	// Make this container generic (in app.js? and have it at all times and just change width?)
 	const container = {
 		position: 'absolute',
 		width: '50%',
-		marginTop: '15%',
-		margiRight: 'auto',
-		marginLeft: '34%',
+		height: '40%',
+		top: '30%',
+		// margiRight: 'auto',
+		marginLeft: '25%',
 		zIndex: 3,
 		textAlign: 'center',
 		alignItems: 'center',
 		fontWeight: 'bold',
-		backgroundColor: `rgb(${[10,10,10,0.7]})`,
-		borderRadius: '15px'
+		backgroundColor: `rgb(${[220,220,220,0.95]})`,
+		borderRadius: '15px',
 	}
 
 	return (
-		<div style={container}>
-			<h1 style={{fontSize: '5vw', color: 'white', opacity: 1}}> MARTIN STILES </h1>
-			<p style={{fontSize: '1.5vw', color: 'white', margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Friendly neighborhood spiderman.</p>
+		<div style={container} className={'fadeIn'}>
+			<h1 style={{fontSize: '6em', color: fontColor, opacity: 1}}> MARTIN STILES </h1>
+			<p style={{fontSize: '2em', color: fontColor}}> Web developer. Tech enthusiast. Eater of tacos.</p>
 		</div>
 	)
 }

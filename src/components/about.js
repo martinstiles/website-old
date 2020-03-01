@@ -1,34 +1,42 @@
 import React from 'react'
 
+// height 50% ??
 const About = () => {
+	const fontColor = '#101010'
+
+	// Make this container generic (in app.js? and have it at all times and just change width?)
+	// Evt lag en egen component for container
 	const container = {
-		position: 'absolute',
-		width: '96%',
-		maxHeight: '85%',
-		marginTop: '15%',
-		margiRight: 'auto',
-		marginLeft: '2%',
+		position: 'fixed',
+		width: '78%',
+		top: '4%',
+		right: '2%',
+		marginLeft: '20%',
+		maxHeight: '92%',
+		overFlow: 'scroll',
+		bottom: '4%',
+		//ml 34
 		zIndex: 3,
 		textAlign: 'center',
 		alignItems: 'center',
-		backgroundColor: `rgb(${[10,10,10,0.7]})`,
-		borderRadius: '15px',
-		overflow: 'scroll',
-		color: 'white',
-		fontSize: '5vw'
+		fontWeight: 'bold',
+		backgroundColor: `rgb(${[220,220,220,0.95]})`,
+		borderRadius: '15px'
 	}
 
-	// egen komponent for 'header box'
-	// Bildeplassering blir tricky
-	// Finn på masse info slik at man må scrolle??
+	// TODO: Make code reusable
 	return (
 		<div style={container}>
-			HALLOOOOOOO
-			<p> lol </p>
-			<p> lol </p>
-			<p> lol </p>
-			<p> lol </p>
-			<p> lol </p>
+			<h1 style={{fontSize: '5em', color: fontColor, opacity: 1}}> About </h1>
+			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
 		</div>
 	)
 }

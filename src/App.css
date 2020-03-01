@@ -5,6 +5,9 @@
   background: linear-gradient(90deg, rgb(17, 68, 62) 0%, rgb(65, 95, 92) 100%);
 }
 
+.app {
+  background-image: url('./media/Background.JPG');
+}
 
 @keyframes App-logo-spin {
   from {

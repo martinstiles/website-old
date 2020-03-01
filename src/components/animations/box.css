@@ -1,0 +1,7 @@
+.navbar {
+  width: 50%;
+  transition: all 2s ease; 
+}
+.navbar:hover{
+  width: 100%;
+}
