@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import './App.css';
 import Navbar from './components/navbar'
-import Home from './components/home.js'
-import About from './components/about.js'
-import Portfolio from './components/portfolio.js'
+import Home from './pages/home.js'
+import About from './pages/about.js'
+import Projects from './pages/projects'
 import Background from './media/Background.JPG'
+
+const fontTypeContext = React.createContext('em');
 
 //TODO: Ha en if (ternary) som gir forskjellig main/navbar?
 function App() {
@@ -39,7 +41,7 @@ function App() {
       <Navbar setPageInParent={getPageFromChild}/>
       { currentPage === 'home' && <Home /> }
       { currentPage === 'about' && <About />}
-      { currentPage === 'portfolio' && <Portfolio />}
+      { currentPage === 'projects' && <Projects />}
     </div>
   );
 }

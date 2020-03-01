@@ -1,5 +1,5 @@
 import React from 'react'
-import './animations/fadeIn.css'
+import '../animations/fadeIn.css'
 
 // height 50% ??
 const Home = () => {
@@ -21,10 +21,13 @@ const Home = () => {
 		borderRadius: '15px',
 	}
 
+	const headerStyle = {fontSize: '5em', color: fontColor, opacity: 1}
+	const pStyle = {fontSize: '2em', color: fontColor}
+
 	return (
 		<div style={container} className={'fadeIn'}>
-			<h1 style={{fontSize: '6em', color: fontColor, opacity: 1}}> MARTIN STILES </h1>
-			<p style={{fontSize: '2em', color: fontColor}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<h1 style={headerStyle}> MARTIN STILES </h1>
+			<p style={pStyle}> Web developer. Tech enthusiast. Eater of tacos.</p>
 		</div>
 	)
 }

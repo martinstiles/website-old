@@ -5,7 +5,7 @@ import Link from '@material-ui/core/Link'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import InstagramIcon from '@material-ui/icons/Instagram'
-import './animations/fadeIn.css'
+import '../animations/fadeIn.css'
 
 // TODO: Sikker på at det lønner seg å bruke vw på fonts?
 // Can use useMemo here, and make it update when the global value "activePage" changes (implemented eventually)
@@ -56,10 +56,10 @@ const Navbar = ({setPageInParent}) => {
     gridColumn: 1,
     gridRow: 1,
     justifySelf: 'left',
-    marginLeft: '3vw',
+    marginLeft: '3%',
   }
 
-  const midFontSize = {fontSize: '2.2em', fontWeigh: 'bold'}
+  const midFontSize = {fontSize: '2em', fontWeigh: 'bold'}
 
   // Footer style
   const footer = {marginBottom: '3vw', justifySelf: 'right', gridColumn: 3, gridRow: 1,}
@@ -79,14 +79,16 @@ const Navbar = ({setPageInParent}) => {
 
 
   // Noe i denne dur? onHover={() => style={transform: `scale($1.1)`}}
+
+  // TODO!: ADD BUTTONS FOR SWITCH BETWEEN LIGHT/DARK MODE
   return (
     <div className={'fadeIn'} style={currentPage === 'home' ? verticalStyle : verticalStyle}>
-        <h1 style={isHome ? verticalHeader : verticalHeader}> {currentPage.toUpperCase()} </h1>
+        <h1 style={isHome ? verticalHeader : verticalHeader}> { currentPage.toUpperCase()} </h1>
 
         <ButtonGroup style={{gridRow: 1, gridColumn: 2, justifySelf: 'center'}} orientation={isHome ? 'vertical' : 'vertical'} color="inherit" size='large'>
           { isHome || <Button style={midFontSize} variant='text' color='inherit' disabled={isHome} onClick={() => onLinkClick('home')}> Home </Button> }
           <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'about'} onClick={() => onLinkClick('about')}> About </Button>
-          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'portfolio'} onClick={() => onLinkClick('portfolio')}> Portfolio </Button>
+          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'projects'} onClick={() => onLinkClick('projects')}> projects </Button>
           <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'blog'} onClick={() => onLinkClick('blog')}> Blog </Button>
         </ButtonGroup>
 

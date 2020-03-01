@@ -1,6 +1,5 @@
 import React from 'react'
 
-// height 50% ??
 const About = () => {
 	const fontColor = '#101010'
 
@@ -15,7 +14,6 @@ const About = () => {
 		maxHeight: '92%',
 		overFlow: 'scroll',
 		bottom: '4%',
-		//ml 34
 		zIndex: 3,
 		textAlign: 'center',
 		alignItems: 'center',
