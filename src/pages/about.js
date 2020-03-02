@@ -1,7 +1,10 @@
 import React from 'react'
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const About = () => {
 	const fontColor = '#101010'
+	const smallScreen = useMediaQuery('(max-width:600px)') // Boolean that is true if screen is 600px or less
+	if (smallScreen) { console.log('JAJAJAJA')}
 
 	// Make this container generic (in app.js? and have it at all times and just change width?)
 	// Evt lag en egen component for container
@@ -12,13 +15,13 @@ const About = () => {
 		right: '2%',
 		marginLeft: '20%',
 		maxHeight: '92%',
-		overFlow: 'scroll',
+		overflow: 'scroll',
 		bottom: '4%',
 		zIndex: 3,
 		textAlign: 'center',
 		alignItems: 'center',
 		fontWeight: 'bold',
-		backgroundColor: `rgb(${[220,220,220,0.95]})`,
+		backgroundColor: `rgb(${[220,220,220,0.97]})`,
 		borderRadius: '15px'
 	}
 

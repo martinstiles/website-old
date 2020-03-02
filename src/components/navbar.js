@@ -18,7 +18,8 @@ const Navbar = ({setPageInParent}) => {
     height: '92%',
     position: 'fixed',
     zIndex: 2,
-    margin: '2% 0 2% 2%',
+    top: '4%',
+    left: '2%',
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'center',
@@ -26,7 +27,7 @@ const Navbar = ({setPageInParent}) => {
     fontFamily: 'Acme, cursive',
     color: fontColor,
     borderRadius: '15px',
-    backgroundColor: `rgb(${[220,220,220,0.95]})`,
+    backgroundColor: `rgb(${[220,220,220,0.97]})`,
   }
   // FOR PHONE?
   const horizontalStyle = {
@@ -47,7 +48,7 @@ const Navbar = ({setPageInParent}) => {
   // Header style
   const verticalHeader = {
     marginTop: '3vw',
-    fontSize: '3.5em',
+    fontSize: '3.5vw',
     fontWeight: 'bold'
   }
   const horizontalHeader = {
@@ -62,7 +63,7 @@ const Navbar = ({setPageInParent}) => {
   const midFontSize = {fontSize: '2em', fontWeigh: 'bold'}
 
   // Footer style
-  const footer = {marginBottom: '3vw', justifySelf: 'right', gridColumn: 3, gridRow: 1,}
+  const footer = {marginBottom: '3vw', justifySelf: 'right'}
   const iconStyle = {width: '3vw', height: '3vw'}
 
   const [currentPage, setCurrentPage] = useState('home')
@@ -72,13 +73,6 @@ const Navbar = ({setPageInParent}) => {
     setIsHome(page === 'home')
     setPageInParent(page)
   }
-
-  // TODO:
-  // const click = (page) => { localStorage.setItem('currentPage', page)}
-  // Må følgelig initialisere page basert på localStorage.getItem('currentPage')
-
-
-  // Noe i denne dur? onHover={() => style={transform: `scale($1.1)`}}
 
   // TODO!: ADD BUTTONS FOR SWITCH BETWEEN LIGHT/DARK MODE
   return (

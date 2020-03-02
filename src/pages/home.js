@@ -11,23 +11,26 @@ const Home = () => {
 		width: '50%',
 		height: '40%',
 		top: '30%',
-		// margiRight: 'auto',
-		marginLeft: '25%',
+		marginLeft: '34%',
 		zIndex: 3,
 		textAlign: 'center',
-		alignItems: 'center',
 		fontWeight: 'bold',
-		backgroundColor: `rgb(${[220,220,220,0.95]})`,
+		backgroundColor: `rgb(${[220,220,220,0.97]})`,
 		borderRadius: '15px',
+
+		display: 'grid',
+    gridTemplateColumns: '100%',
+		gridTemplateRows: '50% 50%',
+		justifyContent: 'space-between'
 	}
 
-	const headerStyle = {fontSize: '5em', color: fontColor, opacity: 1}
-	const pStyle = {fontSize: '2em', color: fontColor}
+	const headerStyle = {fontSize: '5em', color: fontColor, margin: '5% 3% 0 3%'}
+	const infoStyle = {fontSize: '2em', color: fontColor, margin: '5% 3% 5% 3%'}
 
 	return (
 		<div style={container} className={'fadeIn'}>
 			<h1 style={headerStyle}> MARTIN STILES </h1>
-			<p style={pStyle}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={infoStyle}> Web developer. Tech enthusiast. Eater of tacos.</p>
 		</div>
 	)
 }

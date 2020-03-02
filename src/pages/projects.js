@@ -15,12 +15,11 @@ export const Projects = () => {
 		maxHeight: '92%',
 		overFlow: 'scroll',
 		bottom: '4%',
-		//ml 34
 		zIndex: 3,
 		textAlign: 'center',
 		alignItems: 'center',
 		fontWeight: 'bold',
-		backgroundColor: `rgb(${[220,220,220,0.95]})`,
+		backgroundColor: `rgb(${[220,220,220,0.97]})`,
 		borderRadius: '15px'
 	}
 

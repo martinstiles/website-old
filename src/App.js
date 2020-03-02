@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
-import './App.css';
 import Navbar from './components/navbar'
 import Home from './pages/home.js'
 import About from './pages/about.js'
 import Projects from './pages/projects'
 import Background from './media/Background.JPG'
 
-const fontTypeContext = React.createContext('em');
+// const fontTypeContext = React.createContext('em');
 
 //TODO: Ha en if (ternary) som gir forskjellig main/navbar?
 function App() {
@@ -44,15 +43,6 @@ function App() {
       { currentPage === 'projects' && <Projects />}
     </div>
   );
-}
-// <div><Home /></div>
-
-function BackgroundColor() {
-  return(
-    <div style={{color: `rgb(${[10,10,10,0.7]})`, width: '100%', height: '100%', zIndex: 100}}>
-
-    </div>
-  )
 }
 
 export default App;
