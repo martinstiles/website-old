@@ -25,18 +25,18 @@ export const Projects = () => {
 
 	// TODO: Make code reusable
 	return (
-		<Container>
-			<h1 style={{fontSize: '5em', color: fontColor, opacity: 1}}> Projects </h1>
-			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
-			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
-			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
-			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
-			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
-			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
-			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
-			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
-			<p style={{fontSize: '1.5em', color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
-		</Container>
+		<div style={container}>
+			<h1 style={{fontSize: `calc(${2}em + ${2}vw)`, color: fontColor, opacity: 1}}> About </h1>
+			<p style={{fontSize: `calc(${1}em + ${1}vw)`, color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: `calc(${1}em + ${1}vw)`, color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: `calc(${1}em + ${1}vw)`, color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: `calc(${1}em + ${1}vw)`, color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: `calc(${1}em + ${1}vw)`, color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: `calc(${1}em + ${1}vw)`, color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: `calc(${1}em + ${1}vw)`, color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: `calc(${1}em + ${1}vw)`, color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+			<p style={{fontSize: `calc(${1}em + ${1}vw)`, color: fontColor, margin: '4vw 2vw'}}> Web developer. Tech enthusiast. Eater of tacos.</p>
+		</div>
 	)
 }
 

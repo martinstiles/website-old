@@ -4,7 +4,12 @@ import '../animations/fadeIn.css'
 // height 50% ??
 const Home = () => {
 	const fontColor = '#101010'
-
+	const outerContainer = {
+		width: '100%',
+		height: '100%',
+		textAlign: 'center',
+		alignItems: 'center'
+	}
 	// Make this container generic (in app.js? and have it at all times and just change width?)
 	const container = {
 		position: 'absolute',
@@ -18,14 +23,12 @@ const Home = () => {
 		backgroundColor: `rgb(${[220,220,220,0.97]})`,
 		borderRadius: '15px',
 
-		display: 'grid',
-    gridTemplateColumns: '100%',
-		gridTemplateRows: '50% 50%',
-		justifyContent: 'space-between'
+		display: 'flex',
+		flexDirection: 'column',
 	}
 
 	const headerStyle = {fontSize: '5em', color: fontColor, margin: '5% 3% 0 3%'}
-	const infoStyle = {fontSize: '2em', color: fontColor, margin: '5% 3% 5% 3%'}
+	const infoStyle = {fontSize: '2em', color: fontColor, margin: '9% 3% 5% 3%'}
 
 	return (
 		<div style={container} className={'fadeIn'}>

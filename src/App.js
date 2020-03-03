@@ -14,7 +14,7 @@ function App() {
     alignItems: 'center',
     //backgroundImage: `url(${Background})`,
     width: '100%',
-    height: '100%'
+    height: '100%',
   }
 
   // TODO: PROBLEM MED ABSOLUTE IMAGE?
@@ -38,7 +38,7 @@ function App() {
         <img style={imageStyle} src={Background} alt='' />
       </div>
       <Navbar setPageInParent={getPageFromChild}/>
-      { currentPage === 'home' && <Home /> }
+      
       { currentPage === 'about' && <About />}
       { currentPage === 'projects' && <Projects />}
     </div>

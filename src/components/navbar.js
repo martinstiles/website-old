@@ -10,16 +10,34 @@ import '../animations/fadeIn.css'
 // TODO: Sikker på at det lønner seg å bruke vw på fonts?
 // Can use useMemo here, and make it update when the global value "activePage" changes (implemented eventually)
 const Navbar = ({setPageInParent}) => {
+  const [currentPage, setCurrentPage] = useState('home')
+  const [isHome, setIsHome] = useState(true)
+  const handleClick = (page) => {
+    setCurrentPage(page)
+    setIsHome(page === 'home')
+    setPageInParent(page)
+    sessionStorage.setItem('init', 'false')
+  }
+  // sessionStorage to decide style of components
+  if (currentPage === 'home') sessionStorage.setItem('visited', 'false')
+  const initialMount = () => {
+		return sessionStorage.getItem('init') !== 'false'
+	}
+
   const fontColor = '#101010'
+  //const width = isHome ? '30%' : '16%'
+  //const leftMargin = isHome ? '35%' : '2%'
+  const width = isHome ? '30%' : '16%'
+  const leftMargin = isHome ? '35%' : '2%'
 
   // Different styles for vertical/horizontal navbar
   const verticalStyle = {
-    width: '16%',
+    width: width,
     height: '92%',
     position: 'fixed',
     zIndex: 2,
     top: '4%',
-    left: '2%',
+    left: leftMargin,
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'center',
@@ -47,43 +65,39 @@ const Navbar = ({setPageInParent}) => {
 
   // Header style
   const verticalHeader = {
-    marginTop: '3vw',
-    fontSize: '3.5vw',
-    fontWeight: 'bold'
-  }
-  const horizontalHeader = {
-    fontSize: '3em',
+    fontSize: `calc(${1.5}em + ${1.5}vw)`,
     fontWeight: 'bold',
-    gridColumn: 1,
-    gridRow: 1,
-    justifySelf: 'left',
-    marginLeft: '3%',
+    margin: '3vw 5% 3% 5%'
   }
 
-  const midFontSize = {fontSize: '2em', fontWeigh: 'bold'}
+  const midFontSize = {fontSize: `calc(${1}em + ${1}vw)`, fontWeigh: 'bold'}
 
   // Footer style
   const footer = {marginBottom: '3vw', justifySelf: 'right'}
   const iconStyle = {width: '3vw', height: '3vw'}
 
-  const [currentPage, setCurrentPage] = useState('home')
-  const [isHome, setIsHome] = useState(true)
-  const onLinkClick = (page) => {
-    setCurrentPage(page)
-    setIsHome(page === 'home')
-    setPageInParent(page)
-  }
-
   // TODO!: ADD BUTTONS FOR SWITCH BETWEEN LIGHT/DARK MODE
+  // <p style={midFontSize}> Web developer. Tech enthusiast. Eater of tacos.</p>
+  // initialMount() ? 'fadeIn' : (isHome ? 'moveRight' : 'moveLeft')
+  console.log(isHome)
   return (
-    <div className={'fadeIn'} style={currentPage === 'home' ? verticalStyle : verticalStyle}>
-        <h1 style={isHome ? verticalHeader : verticalHeader}> { currentPage.toUpperCase()} </h1>
+    <div className={initialMount() ? 'fadeIn' : (isHome ? 'moveRight' : 'moveLeft')} style={verticalStyle}>
+        { isHome ?
+          <div>
+          <h1 style={verticalHeader}> MARTIN STILES </h1>
+          <p style={{fontSize: `calc(${0.7}em + ${0.7}vw)`, fontWeigh: 'cursive', margin: '0 5%'}}>
+            Web developer. Tech enthusiast. Eater of tacos
+          </p>
+          </div>
+            :
+          <h1 style={verticalHeader}> { currentPage.toUpperCase()} </h1>
+        }
 
-        <ButtonGroup style={{gridRow: 1, gridColumn: 2, justifySelf: 'center'}} orientation={isHome ? 'vertical' : 'vertical'} color="inherit" size='large'>
-          { isHome || <Button style={midFontSize} variant='text' color='inherit' disabled={isHome} onClick={() => onLinkClick('home')}> Home </Button> }
-          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'about'} onClick={() => onLinkClick('about')}> About </Button>
-          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'projects'} onClick={() => onLinkClick('projects')}> projects </Button>
-          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'blog'} onClick={() => onLinkClick('blog')}> Blog </Button>
+        <ButtonGroup orientation={'vertical'} color="inherit" size='large'>
+          { isHome || <Button style={midFontSize} variant='text' color='inherit' disabled={isHome} onClick={() => handleClick('home')}> Home </Button> }
+          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'about'} onClick={() => handleClick('about')}> About </Button>
+          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'projects'} onClick={() => handleClick('projects')}> projects </Button>
+          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'blog'} onClick={() => handleClick('blog')}> Blog </Button>
         </ButtonGroup>
 
         <div style={footer}>
