@@ -11,8 +11,8 @@
 
 .moveLeft {
   animation: moveLeft 1s forwards;
-  margin-left: 35%;
-  width: 30%;
+  margin-left: 39%;
+  width: 22%;
 }
 @keyframes moveLeft {
   to {
@@ -23,13 +23,13 @@
 }
 .moveRight {
   animation: moveRight 1s forwards;
-  margin-left: -35%;
+  margin-left: -39%;
   width: 16%;
 }
 @keyframes moveRight{
   to {
-    margin-left: 0;
-    width: 30%;
+    margin-left: 0%;
+    width: 22%;
     transition: margin-left linear;
     transform: width linear;
   }
@@ -45,3 +45,12 @@
     transition: opacity linear;
   }
 }
+
+.navbarGradient {
+  /* background: linear-gradient(90deg, #4C6663 0%, rgb(6, 99, 88) 50%, #4C6663 100%); */
+  background: linear-gradient(90deg, rgb(17, 68, 62) 0%, rgb(65, 95, 92) 100%);
+}
+
+
+
+

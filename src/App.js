@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import Navbar from './components/navbar'
-import Home from './pages/home.js'
-import About from './pages/about.js'
-import Projects from './pages/projects'
+import About from './components/about.js'
+import Projects from './components/projects'
 import Background from './media/Background.JPG'
 
 // const fontTypeContext = React.createContext('em');
@@ -38,11 +37,11 @@ function App() {
         <img style={imageStyle} src={Background} alt='' />
       </div>
       <Navbar setPageInParent={getPageFromChild}/>
-      
       { currentPage === 'about' && <About />}
       { currentPage === 'projects' && <Projects />}
     </div>
   );
 }
+// 
 
 export default App;

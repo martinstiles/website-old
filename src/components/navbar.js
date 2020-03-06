@@ -7,8 +7,6 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import '../animations/fadeIn.css'
 
-// TODO: Sikker på at det lønner seg å bruke vw på fonts?
-// Can use useMemo here, and make it update when the global value "activePage" changes (implemented eventually)
 const Navbar = ({setPageInParent}) => {
   const [currentPage, setCurrentPage] = useState('home')
   const [isHome, setIsHome] = useState(true)
@@ -16,38 +14,37 @@ const Navbar = ({setPageInParent}) => {
     setCurrentPage(page)
     setIsHome(page === 'home')
     setPageInParent(page)
-    sessionStorage.setItem('init', 'false')
+    sessionStorage.setItem('initialMount', 'false')
   }
   // sessionStorage to decide style of components
-  if (currentPage === 'home') sessionStorage.setItem('visited', 'false')
-  const initialMount = () => {
-		return sessionStorage.getItem('init') !== 'false'
-	}
+  if (currentPage === 'home') sessionStorage.setItem('visited', 'false') // for About and Projects
+  const initialMount = () => sessionStorage.getItem('initialMount') !== 'false' // for Navbar
+  // må lage logikk for navbar bug
+  //const refreshable = 
+  //sessionStorage.getItem('refreshable')
 
-  const fontColor = '#101010'
-  //const width = isHome ? '30%' : '16%'
-  //const leftMargin = isHome ? '35%' : '2%'
-  const width = isHome ? '30%' : '16%'
-  const leftMargin = isHome ? '35%' : '2%'
+  const fontColor = `rgb(${[220,220,220,1]})`
+  const width = isHome ? '22%' : '16%'
+  const leftMargin = isHome ? '39%' : '0%'
 
   // Different styles for vertical/horizontal navbar
   const verticalStyle = {
     width: width,
-    height: '92%',
+    height: '100%',
     position: 'fixed',
     zIndex: 2,
-    top: '4%',
+    top: '0%',
     left: leftMargin,
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'center',
     justifyContent: 'space-between',
-    fontFamily: 'Acme, cursive',
+    //fontFamily: 'Acme, cursive',
     color: fontColor,
-    borderRadius: '15px',
-    backgroundColor: `rgb(${[220,220,220,0.97]})`,
+    backgroundColor: `rgb(${[40,40,40,1]})`,
   }
   // FOR PHONE?
+  /*
   const horizontalStyle = {
     width: '96%',
     height: '10%',
@@ -61,43 +58,34 @@ const Navbar = ({setPageInParent}) => {
     color: fontColor,
     borderRadius: '15px',
     backgroundColor: `rgb(${[220,220,220,0.95]})`,
-  }
+  } */
 
   // Header style
   const verticalHeader = {
-    fontSize: `calc(${1.5}em + ${1.5}vw)`,
+    // TODO: MAKE NAVBAR WITH FLEX OR SOMETHING: THIS MAKES THE BUTTONS MOVE BECAUSE OF THE DIFFERENCE IN SIZE
+    fontSize: currentPage === 'projects' ? `calc(${0.5}em + ${2}vw)` : `calc(${1.5}em + ${1.5}vw)`,
     fontWeight: 'bold',
     margin: '3vw 5% 3% 5%'
   }
 
-  const midFontSize = {fontSize: `calc(${1}em + ${1}vw)`, fontWeigh: 'bold'}
+  const midFontSize = {fontSize: `calc(${1}em + ${1}vw)`}
 
   // Footer style
   const footer = {marginBottom: '3vw', justifySelf: 'right'}
-  const iconStyle = {width: '3vw', height: '3vw'}
+  const iconStyle = {width: `calc(${0.5}em + ${2}vw)`, height: `calc(${0.5}em + ${2}vw)`}
 
   // TODO!: ADD BUTTONS FOR SWITCH BETWEEN LIGHT/DARK MODE
-  // <p style={midFontSize}> Web developer. Tech enthusiast. Eater of tacos.</p>
-  // initialMount() ? 'fadeIn' : (isHome ? 'moveRight' : 'moveLeft')
-  console.log(isHome)
   return (
     <div className={initialMount() ? 'fadeIn' : (isHome ? 'moveRight' : 'moveLeft')} style={verticalStyle}>
-        { isHome ?
-          <div>
-          <h1 style={verticalHeader}> MARTIN STILES </h1>
-          <p style={{fontSize: `calc(${0.7}em + ${0.7}vw)`, fontWeigh: 'cursive', margin: '0 5%'}}>
-            Web developer. Tech enthusiast. Eater of tacos
-          </p>
-          </div>
-            :
-          <h1 style={verticalHeader}> { currentPage.toUpperCase()} </h1>
+        { 
+          <h1 style={verticalHeader}> { isHome ? 'WELCOME' : currentPage.toUpperCase()} </h1>
         }
 
         <ButtonGroup orientation={'vertical'} color="inherit" size='large'>
           { isHome || <Button style={midFontSize} variant='text' color='inherit' disabled={isHome} onClick={() => handleClick('home')}> Home </Button> }
           <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'about'} onClick={() => handleClick('about')}> About </Button>
           <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'projects'} onClick={() => handleClick('projects')}> projects </Button>
-          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'blog'} onClick={() => handleClick('blog')}> Blog </Button>
+          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'blog'} onClick={() => handleClick('blog')}> Other </Button>
         </ButtonGroup>
 
         <div style={footer}>

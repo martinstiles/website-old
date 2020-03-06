@@ -2,11 +2,10 @@ import React from 'react'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import '../animations/fadeIn.css'
 
-const About = () => {
-	const fontColor = '#101010'
-	const smallScreen = useMediaQuery('(max-width:600px)') // Boolean that is true if screen is 600px or less
-	if (smallScreen) { console.log('JAJAJAJA')}
+const Projects = () => {
+	const fontColor = `rgb(${[40,40,40,1]})`
 	
+	// Checks to see if any other pages than home has been visitet, so the page doesn't fade in when you switch pages
 	const visit = () => {
 		const visited = sessionStorage.getItem('visited') !== 'true'
 		if (visited) sessionStorage.setItem(`visited`, 'true')
@@ -17,20 +16,23 @@ const About = () => {
 	// Evt lag en egen component for container
 	const container = {
 		position: 'fixed',
-		width: '78%',
-		top: '4%',
-		right: '2%',
-		marginLeft: '20%',
-		maxHeight: '92%',
+		width: '84%',
+		top: '0%',
+		marginLeft: '16%',
+		height: '100%',
 		overflow: 'scroll',
 		bottom: '4%',
 		zIndex: 3,
 		textAlign: 'center',
 		alignItems: 'center',
 		fontWeight: 'bold',
-		backgroundColor: `rgb(${[220,220,220,0.97]})`,
-		borderRadius: '15px'
+		backgroundColor: `rgb(${[220,220,220,1]})`,
+
+		// display: 'flex'
 	}
+	/*
+	const column = { flex: '50%', maxWidth: '50%' }
+	*/
 	
 	// TODO: Make code reusable
 	return (
@@ -49,4 +51,4 @@ const About = () => {
 	)
 }
 
-export default About
+export default Projects
