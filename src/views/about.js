@@ -3,7 +3,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import '../animations/fadeIn.css'
 import TopBar from './about/topBar'
 import InfoBox from './about/infoBox'
-import Image from '../media/fb_image.jpg'
 
 const About = () => {
 	const fontColor = `rgb(${[40,40,40,1]})`
@@ -26,10 +25,8 @@ const About = () => {
 		marginLeft: '16%',
 		height: '100%',
 		overflow: 'scroll',
-		bottom: '4%',
-		zIndex: 3,
 		textAlign: 'center',
-		alignItems: 'center',
+		// alignItems: 'center',
 		fontWeight: 'bold',
 		color: fontColor,
 		backgroundColor: `rgb(${[220,220,220,1]})`,

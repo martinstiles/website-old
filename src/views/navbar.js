@@ -27,7 +27,6 @@ const Navbar = ({setPageInParent}) => {
   const width = isHome ? '22%' : '16%'
   const leftMargin = isHome ? '39%' : '0%'
 
-  // Different styles for vertical/horizontal navbar
   const verticalStyle = {
     width: width,
     height: '100%',
@@ -62,7 +61,6 @@ const Navbar = ({setPageInParent}) => {
 
   // Header style
   const verticalHeader = {
-    // TODO: MAKE NAVBAR WITH FLEX OR SOMETHING: THIS MAKES THE BUTTONS MOVE BECAUSE OF THE DIFFERENCE IN SIZE
     fontSize: currentPage === 'projects' ? `calc(${0.5}em + ${2}vw)` : `calc(${1.5}em + ${1.5}vw)`,
     fontWeight: 'bold',
     margin: '3vw 5% 3% 5%'
@@ -74,7 +72,8 @@ const Navbar = ({setPageInParent}) => {
   const footer = {marginBottom: '3vw', justifySelf: 'right'}
   const iconStyle = {width: `calc(${0.5}em + ${2}vw)`, height: `calc(${0.5}em + ${2}vw)`}
 
-  // TODO!: ADD BUTTONS FOR SWITCH BETWEEN LIGHT/DARK MODE
+  const test = {color: 'white', backgroundColor: 'white'}
+
   return (
     <div className={initialMount() ? 'fadeIn' : (isHome ? 'moveRight' : 'moveLeft')} style={verticalStyle}>
         { 
@@ -83,7 +82,7 @@ const Navbar = ({setPageInParent}) => {
 
         <ButtonGroup orientation={'vertical'} color="inherit" size='large'>
           { isHome || <Button style={midFontSize} variant='text' color='inherit' disabled={isHome} onClick={() => handleClick('home')}> Home </Button> }
-          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'about'} onClick={() => handleClick('about')}> About </Button>
+          <Button style={midFontSize} classes={{disabled: test}} variant='text' color='inherit' disabled={currentPage === 'about'} onClick={() => handleClick('about')}> About </Button>
           <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'projects'} onClick={() => handleClick('projects')}> projects </Button>
           <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'blog'} onClick={() => handleClick('blog')}> Other </Button>
         </ButtonGroup>
@@ -98,6 +97,9 @@ const Navbar = ({setPageInParent}) => {
 }
 
 export default Navbar
+
+// TODO!: ADD BUTTONS FOR SWITCH BETWEEN LIGHT/DARK MODE
+// TODO: MAKE NAVBAR WITH FLEX OR SOMETHING: THIS MAKES THE BUTTONS MOVE BECAUSE OF THE DIFFERENCE IN SIZE
 
 /*
 AUTHORS NOTE

@@ -1,5 +1,4 @@
 import React from 'react'
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import '../animations/fadeIn.css'
 
 const Projects = () => {

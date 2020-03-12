@@ -5,3 +5,7 @@
 .navbar:hover{
   width: 100%;
 }
+
+.colorPicker {
+  color: rgb(90, 172, 235);
+}

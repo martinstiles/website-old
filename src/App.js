@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import Navbar from './components/navbar'
-import About from './components/about.js'
-import Projects from './components/projects'
+import Navbar from './views/navbar'
+import About from './views/about.js'
+import Projects from './views/projects'
 import Background from './media/Background.JPG'
 
 // const fontTypeContext = React.createContext('em');
 
-//TODO: Ha en if (ternary) som gir forskjellig main/navbar?
+//TODO: Ha en if (ternary) som gir forskjellig main/navbar? --> JA, for mobil. Det meste må lages på nytt for mobil
 function App() {
   // background: '#4C6663'
   const style = {
@@ -36,12 +36,12 @@ function App() {
       <div>
         <img style={imageStyle} src={Background} alt='' />
       </div>
-      <Navbar setPageInParent={getPageFromChild}/>
-      { currentPage === 'about' && <About />}
+      
+      { currentPage === 'home' && <About />}
       { currentPage === 'projects' && <Projects />}
     </div>
   );
 }
-// 
+// <Navbar setPageInParent={getPageFromChild}/>
 
 export default App;
