@@ -2,7 +2,7 @@ import React from 'react'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import '../animations/fadeIn.css'
 import TopBar from './about/topBar'
-import InfoBox from './about/infoBox'
+import InfoBox from './about/aboutBox'
 
 const About = () => {
 	const fontColor = `rgb(${[40,40,40,1]})`

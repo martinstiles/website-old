@@ -36,12 +36,19 @@ function App() {
       <div>
         <img style={imageStyle} src={Background} alt='' />
       </div>
-      
-      { currentPage === 'home' && <About />}
+      <Navbar setPageInParent={getPageFromChild}/>
+
+      { currentPage === 'about' && <About />}
       { currentPage === 'projects' && <Projects />}
     </div>
   );
 }
-// <Navbar setPageInParent={getPageFromChild}/>
+
+/*
+<div>
+  <img style={imageStyle} src={Background} alt='' />
+</div>
+<Navbar setPageInParent={getPageFromChild}/>
+*/
 
 export default App;
