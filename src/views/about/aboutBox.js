@@ -18,11 +18,12 @@ const Box = () => {
     paddingBottom: '5%'
   }
   const header = { fontSize: `calc(${2}em + ${2}vw)`, marginTop: '13%' }
+  const margin = {margin: '0 5% 0 5%'}
 
   return (
     <div style={infoBox}>
       <h1 style={header}> Martin Stiles </h1>
-      <h1> Software developer. Tech enthusiast. Eater of tacos.</h1>
+      <h1 style={margin}> Software developer. Tech enthusiast. Eater of tacos.</h1>
       <h1 style={{ marginBottom: '5%'}}> </h1>
 
       <ProfessionalPath />

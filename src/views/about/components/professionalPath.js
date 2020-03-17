@@ -26,7 +26,7 @@ const ProfessionalPath = (props) => {
       </p>
       <div style={flexBox}>
         <div style={circleStyle}>
-          <h1 style={skillStyle}> Web Dev </h1>
+          <h1 style={skillStyle}> WebDev </h1>
           <CircularProgressbar value={webPercentage} text={`${webPercentage}%`} styles={buildStyles({ textColor: "white", trailColor: "white"})}/>
         </div>
         <div style={circleStyle}>

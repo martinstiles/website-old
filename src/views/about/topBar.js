@@ -2,7 +2,6 @@ import React from 'react'
 import LocationOnIcon from '@material-ui/icons/LocationOn'
 import PhoneIcon from '@material-ui/icons/Phone'
 import MailIcon from '@material-ui/icons/Mail'
-import Grid from '@material-ui/core/Grid'
 
 const TopBar = () => {
 
