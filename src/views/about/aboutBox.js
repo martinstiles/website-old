@@ -38,9 +38,9 @@ const Box = () => {
 title:
 */
 
-const InfoBox = () => {
+const AboutBox = () => {
   const imageStyle = {
-    position:'relative',
+    //position:'relative',
     width: '20%',
     borderRadius: '50%',
     border: `3px solid rgb(${[40,40,40,1]})`,
@@ -57,4 +57,4 @@ const InfoBox = () => {
   )
 }
 
-export default InfoBox
+export default AboutBox

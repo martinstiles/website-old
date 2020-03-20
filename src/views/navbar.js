@@ -63,7 +63,8 @@ const Navbar = ({setPageInParent}) => {
   const verticalHeader = {
     fontSize: currentPage === 'projects' ? `calc(${0.5}em + ${2}vw)` : `calc(${1.5}em + ${1.5}vw)`,
     fontWeight: 'bold',
-    margin: '3vw 5% 3% 5%'
+    margin: '3vw 5% 3% 5%',
+    height: '10%'
   }
 
   const midFontSize = {fontSize: `calc(${1}em + ${1}vw)`}

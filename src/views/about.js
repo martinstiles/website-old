@@ -2,7 +2,7 @@ import React from 'react'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import '../animations/fadeIn.css'
 import TopBar from './about/topBar'
-import InfoBox from './about/aboutBox'
+import AboutBox from './about/aboutBox'
 
 const About = () => {
 	const fontColor = `rgb(${[40,40,40,1]})`
@@ -36,7 +36,7 @@ const About = () => {
 	return (
 		<div style={container} className={visit() ? 'appear' : ''}>
 			<TopBar />
-			<InfoBox />
+			<AboutBox />
 		</div>
 	)
 }

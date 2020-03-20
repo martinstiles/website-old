@@ -33,13 +33,9 @@ function App() {
 
   return (
     <div style={style} className='app'>
-      <div>
-        <img style={imageStyle} src={Background} alt='' />
-      </div>
-      <Navbar setPageInParent={getPageFromChild}/>
 
       { currentPage === 'about' && <About />}
-      { currentPage === 'projects' && <Projects />}
+      { currentPage === 'home' && <Projects />}
     </div>
   );
 }
