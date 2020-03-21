@@ -5,6 +5,7 @@ import ProjectSection from './projects/projectSection'
 import ProjectBox from './projects/components/projectBox'
 // IMAGES FOR PROJECTS
 import P1 from '../media/project.jpg'
+import RobotProject from '../media/robotProject.png'
 
 
 const Projects = () => {
@@ -45,12 +46,17 @@ const Projects = () => {
 	const [view, setView] = useState('both')
 	// TODO: make buttons to full screen one of the views
 	
+	//TODO: ADD STRISE
 	return (
 		<div style={container} className={visit() ? 'appear' : ''}>
 			<div style={column}>
 				<ProjectSection type={'personal'} smallScreen={smallScreen}>
-					<ProjectBox image={P1}/>
-					<ProjectBox image={P1}/>
+					<ProjectBox
+						image={RobotProject}
+						desc={'React introductory project'}
+						githubLink={'https://github.com/martinstiles/monsters-rolodex'}
+						projectLink='https://martinstiles.github.io/monsters-rolodex/'
+					/>
 				</ProjectSection>
 			</div>
 			<div style={column}>

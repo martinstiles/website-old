@@ -10,6 +10,7 @@ const ProjectSection = (props) => {
     height: '100%',
     borderRight: !smallScreen && type === 'personal' && `1px solid ${fontColor}`, // We only want border on personal side and not when small screen
     overflow: 'auto',
+    position: 'relative'
   }
 
   return (

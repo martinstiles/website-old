@@ -1,0 +1,12 @@
+.hiddenInfo{
+  transition: .5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgb(220,220,220,0.8);
+  border-radius: 5px;
+  padding-bottom: 1em;
+}
