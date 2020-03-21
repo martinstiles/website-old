@@ -29,7 +29,7 @@ const ProjectBox = (props) => {
       <img onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}  style={imageStyle} src={props.image} alt='' />
       <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={'hiddenInfo'} style={hover ? {opacity: 1} : {opacity: 0}}>
         <h1 style={{fontSize: '2em'}}> {props.desc} </h1>
-        <Button onClick={() => setHover(false)} variant="contained" color="primary" href={props.githubLink} target='_blank' style={{marginRight: '5px'}}>
+        <Button onClick={() => setHover(false)} variant="contained" color="primary" disabled={!props.githubLink} href={props.githubLink} target='_blank' style={{marginRight: '5px'}}>
           Go to repo <GitHubIcon style={{marginLeft: '6px'}} />
         </Button>
         <Button onClick={() => setHover(false)} variant="contained" color="primary" href={props.projectLink} target='_blank'>

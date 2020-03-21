@@ -4,8 +4,8 @@ import '../animations/fadeIn.css'
 import ProjectSection from './projects/projectSection'
 import ProjectBox from './projects/components/projectBox'
 // IMAGES FOR PROJECTS
-import P1 from '../media/project.jpg'
-import RobotProject from '../media/robotProject.png'
+import StriseImage from '../media/strise_comp.png'
+import RobotImage from '../media/robotProject.png'
 
 
 const Projects = () => {
@@ -52,7 +52,7 @@ const Projects = () => {
 			<div style={column}>
 				<ProjectSection type={'personal'} smallScreen={smallScreen}>
 					<ProjectBox
-						image={RobotProject}
+						image={RobotImage}
 						desc={'React introductory project'}
 						githubLink={'https://github.com/martinstiles/monsters-rolodex'}
 						projectLink='https://martinstiles.github.io/monsters-rolodex/'
@@ -61,7 +61,11 @@ const Projects = () => {
 			</div>
 			<div style={column}>
 				<ProjectSection type={'professional'} smallScreen={smallScreen}>
-					<ProjectBox image={P1}/>
+					<ProjectBox
+						image={StriseImage}
+						desc={'Front end development for Strise'}
+						projectLink='https://strise.ai/'
+					/>
 				</ProjectSection>
 			</div>
 		</div>
