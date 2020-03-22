@@ -14,26 +14,27 @@ const TopBar = () => {
     padding: '10px',
     borderRadius: '5px',
 
-    display: 'flex'
+    display: 'flex',
+    justifyContent: 'space-around'
 
   }
   const topbarColumn = {
-    flex: '33.3%', maxWidth: '33.3%', fontSize: `calc(${0.5}em + ${0.5}vw)`, display: 'flex', textAlign: 'center' }
+    flex: '33.3%', maxWidth: '33.3%', display: 'flex', textAlign: 'center' }
   
   const textColumn = {
     flex: '65%', maxWidth: '65%',
-    fontSize: `calc(${0.5}em + ${0.5}vw)`,
+    fontSize: '1em',
     marginLeft: '2%',
     display: 'flex',
     textAlign: 'left',
     flexDirection: 'column',
-    justifyContent: 'space-between'
+    justifyContent: 'space-around'
   }
   const textRow = {
-    flex: '50%', maxHeight: '50%', margin: '0', fontSize: `calc(${0.55}em + ${0.55}vw)`
+    flex: '50%', maxHeight: '50%', margin: '0', fontSize: '1.2em'
   }
 
-  const iconStyle = { width: `calc(${1.1}em + ${1.1}vw)`, height: `calc(${1.1}em + ${1.1}vw)`}
+  const iconStyle = { width: '2em', height: '2em'}
   const iconContainter = { flex: '35%', maxWidth: '35%', textAlign: 'right' }
 
   return (

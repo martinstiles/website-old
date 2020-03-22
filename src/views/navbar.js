@@ -82,10 +82,9 @@ const Navbar = ({setPageInParent}) => {
         }
 
         <ButtonGroup orientation={'vertical'} color="inherit" size='large'>
-          { isHome || <Button style={midFontSize} variant='text' color='inherit' disabled={isHome} onClick={() => handleClick('home')}> Home </Button> }
-          { currentPage === 'about' || <Button style={midFontSize} classes={{disabled: test}} variant='text' color='inherit' disabled={currentPage === 'about'} onClick={() => handleClick('about')}> About </Button>}
-          { currentPage === 'projects' || <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'projects'} onClick={() => handleClick('projects')}> projects </Button>}
-          { currentPage === 'other' || <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'blog'} onClick={() => handleClick('blog')}> Other </Button>}
+          <Button style={midFontSize} variant='text' color='inherit' disabled={isHome} onClick={() => handleClick('home')}> Home </Button> 
+          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'about'} onClick={() => handleClick('about')}> About </Button>
+          <Button style={midFontSize} variant='text' color='inherit' disabled={currentPage === 'projects'} onClick={() => handleClick('projects')}> projects </Button>
         </ButtonGroup>
 
         <div style={footer}>

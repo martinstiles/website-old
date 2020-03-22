@@ -2,7 +2,7 @@ import React from 'react'
 
 const InfoSection = (props) => {
   const sectionStyle = {display: 'flex', textAlign: 'left', margin: '0 5% 5% 5%'}
-  const header = {fontSize: `calc(${1}em + ${1}vw)`}
+  const header = {fontSize: '2em '}
 
   return (
     <div style={{display: 'flex', flexDirection: 'column'}}>

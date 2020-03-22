@@ -46,7 +46,6 @@ const Projects = () => {
 	const [view, setView] = useState('both')
 	// TODO: make buttons to full screen one of the views
 	
-	//TODO: ADD STRISE
 	return (
 		<div style={container} className={visit() ? 'appear' : ''}>
 			<div style={column}>
