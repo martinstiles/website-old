@@ -17,11 +17,8 @@ const Navbar = ({setPageInParent}) => {
     sessionStorage.setItem('initialMount', 'false')
   }
   // sessionStorage to decide style of components
-  if (currentPage === 'home') sessionStorage.setItem('visited', 'false') // for About and Projects
+  if (isHome) sessionStorage.setItem('visited', 'false') // for About and Projects
   const initialMount = () => sessionStorage.getItem('initialMount') !== 'false' // for Navbar
-  // må lage logikk for navbar bug
-  //const refreshable = 
-  //sessionStorage.getItem('refreshable')
 
   const fontColor = `rgb(${[220,220,220,1]})`
   const width = isHome ? '22%' : '16%'
@@ -73,8 +70,6 @@ const Navbar = ({setPageInParent}) => {
   const footer = {marginBottom: '3vw', justifySelf: 'right'}
   const iconStyle = {width: `calc(${0.5}em + ${2}vw)`, height: `calc(${0.5}em + ${2}vw)`}
 
-  const test = {color: 'white', backgroundColor: 'white'}
-
   return (
     <div className={initialMount() ? 'fadeIn' : (isHome ? 'moveRight' : 'moveLeft')} style={verticalStyle}>
         { 
@@ -99,7 +94,6 @@ const Navbar = ({setPageInParent}) => {
 export default Navbar
 
 // TODO!: ADD BUTTONS FOR SWITCH BETWEEN LIGHT/DARK MODE
-// TODO: MAKE NAVBAR WITH FLEX OR SOMETHING: THIS MAKES THE BUTTONS MOVE BECAUSE OF THE DIFFERENCE IN SIZE
 
 /*
 AUTHORS NOTE

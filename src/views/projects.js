@@ -11,8 +11,6 @@ import RobotImage from '../media/robotProject.png'
 const Projects = () => {
 	const fontColor = `rgb(${[40,40,40,1]})`
 	
-	// TODO: make this and ther duplicate code in a common files folder ?
-	// Checks to see if any other pages than home has been visitet, so the page doesn't fade in when you switch pages
 	const visit = () => {
 		const visited = sessionStorage.getItem('visited') !== 'true'
 		if (visited) sessionStorage.setItem(`visited`, 'true')
@@ -21,8 +19,6 @@ const Projects = () => {
 
 	const smallScreen = useMediaQuery('(max-width:1000px)') // Boolean that is true if screen is 600px or less
 
-	// Make this container generic (in app.js? and have it at all times and just change width?)
-	// Evt lag en egen component for container
 	const container = {
 		position: 'fixed',
 		width: '84%',

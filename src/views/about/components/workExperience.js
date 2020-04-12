@@ -3,7 +3,6 @@ import InfoSection from './infoSection'
 import Link from '@material-ui/core/Link'
 
 const WorkExperience = () => {
-  const margin = '8px'
   const titleStyle = {fontSize: '2em', marginBottom: '2px'}
   const workStyle = {color: `rgb(${[90, 172, 235]})`, fontSize: '1.6em', textDecoration: 'underline', margin: '4px 0'}
   const textStyle = {fontSize: '1.4em', margin: '4px 0'}
