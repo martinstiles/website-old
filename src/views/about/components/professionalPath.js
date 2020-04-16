@@ -35,7 +35,7 @@ const ProfessionalPath = (props) => {
       <p style={textStyle}>
         Consequently, my skills vary a lot. In university I have built a strong engineering foundation, but as I feel university offers
         too much breadth of learning, I often do online courses and reading to acquire more in depth knowledge.
-        Thus, programming technologies I claim to have good experience in are: Python, React, JavaScript (ES8), CSS, HTML, Java.
+        Thus, programming technologies I claim to have good experience in are: Python, React, JavaScript, CSS, HTML, Java.
       </p>
       <div style={flexBox}>
         <div style={circleStyle}>

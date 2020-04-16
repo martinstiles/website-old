@@ -4,8 +4,9 @@ import '../animations/fadeIn.css'
 import ProjectSection from './projects/projectSection'
 import ProjectBox from './projects/components/projectBox'
 // IMAGES FOR PROJECTS
-import StriseImage from '../media/strise_comp.png'
+import StriseImage from '../media/strise.png'
 import RobotImage from '../media/robotProject.png'
+import AlgorithmVisualizer from '../media/pathfindingVisualizer.png'
 
 
 const Projects = () => {
@@ -46,6 +47,12 @@ const Projects = () => {
 		<div style={container} className={visit() ? 'appear' : ''}>
 			<div style={column}>
 				<ProjectSection type={'personal'} smallScreen={smallScreen}>
+					<ProjectBox
+						image={AlgorithmVisualizer}
+						desc={'Visualizing path finding algorithms with Javascript'}
+						githubLink={'https://github.com/martinstiles/pathfinding-visualizer/'}
+						projectLink='https://martinstiles.github.io/pathfinding-visualizer/'
+					/>
 					<ProjectBox
 						image={RobotImage}
 						desc={'React introductory project'}
