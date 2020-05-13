@@ -18,13 +18,20 @@ const Projects = () => {
 		return visited
 	}
 
-	const smallScreen = useMediaQuery('(max-width:1000px)') // Boolean that is true if screen is 600px or less
+	const isSmallScreen = useMediaQuery('(max-width:800px)') // Boolean that is true if screen is 1000px or less
+
+	const marginLeft = isSmallScreen ? '0%' : '16%'
+	const width = isSmallScreen ? '100%' : '84%'
+	const marginTop = isSmallScreen ? '10%' : '0'
+	const height = isSmallScreen ? '90%' : '100%'
 
 	const container = {
 		position: 'fixed',
-		width: '84%',
-		marginLeft: '16%',
-		height: '100%',
+		width,
+		marginLeft,
+		marginTop,
+		height,
+		bottom: 0,
 		overflow: 'scroll',
 		zIndex: 3,
 		textAlign: 'center',
@@ -32,21 +39,22 @@ const Projects = () => {
 		color: fontColor,
 
 		display: 'flex',
-		flexDirection: smallScreen ? 'column' : 'row'
+		flexDirection: isSmallScreen ? 'column' : 'row'
 	}
 	const column = {
-		flex: smallScreen ? '100%' : '50%',
-		maxWidth: smallScreen ? '100%' : '50%',
+		flex: isSmallScreen ? '100%' : '50%',
+		maxWidth: isSmallScreen ? '100%' : '50%',
 	}
 
 	// 'both' or 'personal' or 'professional'
-	const [view, setView] = useState('both')
+	// const [view, setView] = useState('both')
 	// TODO: make buttons to full screen one of the views
 	
 	return (
 		<div style={container} className={visit() ? 'appear' : ''}>
 			<div style={column}>
-				<ProjectSection type={'personal'} smallScreen={smallScreen}>
+				<ProjectSection type={'personal'} isSmallScreen={isSmallScreen}>
+					{ isSmallScreen && <p> NB: These projects might not be optimized for small screens! </p> }
 					<ProjectBox
 						image={AlgorithmVisualizer}
 						desc={'Visualizing path finding algorithms with Javascript'}
@@ -62,7 +70,7 @@ const Projects = () => {
 				</ProjectSection>
 			</div>
 			<div style={column}>
-				<ProjectSection type={'professional'} smallScreen={smallScreen}>
+				<ProjectSection type={'professional'} isSmallScreen={isSmallScreen}>
 					<ProjectBox
 						image={StriseImage}
 						desc={'Front end development for Strise'}

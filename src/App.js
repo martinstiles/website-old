@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import Navbar from './views/navbar'
 import About from './views/about.js'
 import Projects from './views/projects'
-import Background from './media/Background.jpg'
+import Background from './media/Background.JPG'
+import Waterfall from './media/tree.jpg'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 //TODO: Ha en if (ternary) som gir forskjellig main/navbar? --> JA, for mobil. Det meste må lages på nytt for mobil
 function App() {
@@ -22,11 +24,16 @@ function App() {
 
   const [currentPage, setCurrentPage] = useState('home')
 
+  // Boolean that is true if screen is 800px or less
+  const isSmallScreen = useMediaQuery('(max-width:800px)')
+
   return (
     <div style={style} className='app'>
-      <div>
-        <img style={imageStyle} src={Background} alt='' />
-      </div>
+      {
+        <div>
+          <img style={imageStyle} src={isSmallScreen ? Waterfall : Background} alt='' />
+        </div>
+      }
       <Navbar setPageInParent={setCurrentPage}/>
       { currentPage === 'about' && <About />}
       { currentPage === 'projects' && <Projects />}

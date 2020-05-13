@@ -33,6 +33,12 @@ const WorkExperience = () => {
       <p style={textStyle}> June 2018 - July 2019 </p>
       <p style={descriptionStyle}>Working part time as a bartender was a really fun experiece. And besides, being good
       at making drinks is a "surprisingly" useful skill. </p>
+
+      <h1 style={titleStyle}> Tactical Command Assistant </h1>
+      <Link target="_blank" color='inherit' variant='inherit' href='https://forsvaret.no/hogskolene/studiekatalog-bibliotek/Luftkrigsskolen/utdanning/utdanningstilbud/luftvern'> <h1 style={workStyle}> Norwegian Army </h1> </Link>
+      <p style={textStyle}> July 2016 - July 2017 </p>
+      <p style={descriptionStyle}> One year in the Norwegian Air Defence Battalion,
+      honing both self discipline and communication skills. </p>
     </InfoSection>
   )
 }

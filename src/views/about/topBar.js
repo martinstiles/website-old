@@ -2,39 +2,43 @@ import React from 'react'
 import LocationOnIcon from '@material-ui/icons/LocationOn'
 import PhoneIcon from '@material-ui/icons/Phone'
 import MailIcon from '@material-ui/icons/Mail'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const TopBar = () => {
+  // Boolean that is true if screen is 800px or less
+  const isSmallScreen = useMediaQuery('(max-width:800px)')
 
   const topBar = {
     position: 'relative',
-    margin: '3% 4% 5% 4%',
+    margin: isSmallScreen ? '5% 4% 5% 4%' : '3% 4% 5% 4%',
     color: `rgb(${[220,220,220,1]})`,
     backgroundColor: `rgb(${[40,40,40,1]})`,
-    heigth: '40%',
     padding: '10px',
     borderRadius: '5px',
 
     display: 'flex',
-    justifyContent: 'space-around'
+    flexDirection: isSmallScreen ? 'column' : 'row',
+    justifyContent: isSmallScreen ? 'center' :  'space-around'
 
   }
   const topbarColumn = {
-    flex: '33.3%', maxWidth: '33.3%', display: 'flex', textAlign: 'center' }
+    flex: isSmallScreen ? '100%' : '33.3%', maxWidth: isSmallScreen ? '100%' : '33.3%', display: 'flex', textAlign: 'center'
+  }
   
   const textColumn = {
     flex: '65%', maxWidth: '65%',
-    fontSize: '1em',
     marginLeft: '2%',
     display: 'flex',
     textAlign: 'left',
-    flexDirection: 'column',
-    justifyContent: 'space-around'
+    flexDirection: isSmallScreen ? 'column' : 'column',
+    justifyContent: 'space-around',
+    ...(isSmallScreen && {marginBottom: '5px'})
   }
   const textRow = {
-    flex: '50%', maxHeight: '50%', margin: '0', fontSize: '1.2em'
+    flex: '50%', maxHeight: '50%', margin: '0', fontSize: isSmallScreen ? '0.8em' :  '1.2em'
   }
 
-  const iconStyle = { width: '2em', height: '2em'}
+  const iconStyle = { width: isSmallScreen ? '1em' : '2em', height: isSmallScreen ? '1em' :  '2em'}
   const iconContainter = { flex: '35%', maxWidth: '35%', textAlign: 'right' }
 
   return (
@@ -55,7 +59,7 @@ const TopBar = () => {
         </div>
         <div style={textColumn} >
           <p style={textRow}> +47 401 04 816 </p>
-          <p style={textRow}> &nbsp; MON - FRI </p>
+          <p style={textRow}>  MON - FRI </p>
         </div>
       </div>
 

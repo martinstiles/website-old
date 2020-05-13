@@ -26,13 +26,13 @@ const ProjectBox = (props) => {
   // BOTH have the same onMouseEnter/Leave to remove bugs caused when user is too fast
   return (
     <div style={boxStyle}>
-      <img onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}  style={imageStyle} src={props.image} alt='' />
-      <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={'hiddenInfo'} style={hover ? {opacity: 1, width: '23em'} : {opacity: 0}}>
+      <img onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} style={imageStyle} src={props.image} alt='' />
+      <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={'hiddenInfo'} style={hover ? {opacity: 1, width: '23em'} : {opacity: 0, visibility: 'hidden'}}>
         <h1 style={{fontSize: '2em'}}> {props.desc} </h1>
-        <Button onClick={() => setHover(false)} variant="contained" color="primary" disabled={!props.githubLink} href={props.githubLink} target='_blank' style={{marginRight: '5px'}}>
+        <Button onClick={() => setHover(false)} variant="contained" color="primary" disabled={!props.githubLink || !hover} href={props.githubLink} target='_blank' style={{marginRight: '5px'}}>
           Go to repo <GitHubIcon style={{marginLeft: '6px'}} />
         </Button>
-        <Button onClick={() => setHover(false)} variant="contained" color="primary" href={props.projectLink} target='_blank'>
+        <Button onClick={() => setHover(false)} disabled={!hover} variant="contained" color="primary" href={props.projectLink} target='_blank'>
           See project <OpenInNewIcon style={{marginLeft: '5px'}} />
         </Button>
       </div>

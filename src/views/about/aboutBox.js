@@ -3,9 +3,11 @@ import Image from '../../media/fb_image.jpg'
 import ProfessionalPath from './components/professionalPath'
 import WorkExperience from './components/workExperience'
 import Education from './components/education'
-//import Other from './components/other'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const Box = () => {
+  const isSmallScreen = useMediaQuery('(max-width:800px)') // Boolean that is true if screen is 800px or less
+  
   const infoBox = {
     bottom: '0',
     margin: '0 4% 0 4%',
@@ -14,10 +16,12 @@ const Box = () => {
     borderTopLeftRadius: '5px',
     borderTopRightRadius: '5px',
     overflow: 'auto',
-    paddingBottom: '5%'
+    paddingBottom: '5%',
+    zIndex: 1,
+    fontFamily: '"Times New Roman", Times, serif'
   }
-  const header = { fontSize: '4em', marginTop: '13%', marginBottom: '0px' }
-  const underHeader = {fontSize: '2em', margin: '1em', marginLeft: '30px', marginRight: '30px'}
+  const header = { fontSize: isSmallScreen ? '3em' : '4em', marginTop: isSmallScreen ? '26%' : '13%', marginBottom: '0px' }
+  const underHeader = {fontSize: isSmallScreen ? '1.5em' : '2em', margin: '1em', marginLeft: '30px', marginRight: '30px'}
 
   return (
     <div style={infoBox}>
@@ -25,19 +29,23 @@ const Box = () => {
       <h1 style={underHeader}> Software developer. Tech enthusiast. Eater of tacos.</h1>
 
       <ProfessionalPath />
-      <WorkExperience />
       <Education />
+      <WorkExperience />
+      <hr style={{width: '90%', border: `2px solid`, borderRadius: '5px'}} />
     </div>
   )
 }
 
 const AboutBox = () => {
+  const isSmallScreen = useMediaQuery('(max-width:800px)') // Boolean that is true if screen is 800px or less
+
   const imageStyle = {
-    width: '20%',
+    width: isSmallScreen ? '40%' : '20%',
     borderRadius: '50%',
     border: `3px solid rgb(${[40,40,40,1]})`,
-    margin: '0 0 -10% 0',
-
+    margin: isSmallScreen ? '0 0 -22% 0' : '0 0 -10% 0',
+    zIndex: 10,
+    position: 'relative'
   }
 
   return (

@@ -1,13 +1,11 @@
 import React from 'react'
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import '../animations/fadeIn.css'
 import TopBar from './about/topBar'
 import AboutBox from './about/aboutBox'
 
 const About = () => {
-	const fontColor = `rgb(${[40,40,40,1]})`
-	const smallScreen = useMediaQuery('(max-width:600px)') // Boolean that is true if screen is 600px or less
-	if (smallScreen) { console.log('JAJAJAJA')}
+	const isSmallScreen = useMediaQuery('(max-width:800px)') // Boolean that is true if screen is 600px or less
 	
 	// Checks to see if any other pages than home has been visitet, so the page doesn't fade in when you switch pages
 	const visit = () => {
@@ -15,20 +13,22 @@ const About = () => {
 		if (visited) sessionStorage.setItem(`visited`, 'true')
 		return visited
 	}
+	
+	const marginLeft = isSmallScreen ? '0%' : '16%'
+	const width = isSmallScreen ? '100%' : '84%'
+	const marginTop = isSmallScreen ? '10%' : '0'
+	const height = isSmallScreen ? '90%' : '100%'
 
-	// Make this container generic (in app.js? and have it at all times and just change width?)
-	// Evt lag en egen component for container
 	const container = {
 		position: 'fixed',
-		width: '84%',
-		top: '0%',
-		marginLeft: '16%',
-		height: '100%',
+		width,
+		marginLeft,
+		marginTop,
+		height,
+		bottom: 0,
 		overflow: 'scroll',
 		textAlign: 'center',
-		// alignItems: 'center',
 		fontWeight: 'bold',
-		color: fontColor,
 		backgroundColor: `rgb(${[220,220,220,1]})`,
 	}
 	
