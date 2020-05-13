@@ -20,8 +20,8 @@ const Box = () => {
     zIndex: 1,
     fontFamily: '"Times New Roman", Times, serif'
   }
-  const header = { fontSize: isSmallScreen ? '3em' : '4em', marginTop: isSmallScreen ? '26%' : '13%', marginBottom: '0px' }
-  const underHeader = {fontSize: isSmallScreen ? '1.5em' : '2em', margin: '1em', marginLeft: '30px', marginRight: '30px'}
+  const header = { fontSize: isSmallScreen ? '3em' : '4em', marginTop: isSmallScreen ? '26%' : '13%', marginBottom: 0 }
+  const underHeader = {fontSize: isSmallScreen ? '1.5em' : '2em', margin: '0.3em 30px 1em 30px'}
 
   return (
     <div style={infoBox}>
