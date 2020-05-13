@@ -7,9 +7,9 @@ const Eduaction = () => {
   const isSmallScreen = useMediaQuery('(max-width:800px)') // Boolean that is true if screen is 800px or less
 
   const titleStyle = {fontSize: isSmallScreen ? '1.5em' : '2em', marginBottom: '2px'}
-  const workStyle = {color: `rgb(${[90, 172, 235]})`, fontSize: isSmallScreen ? '1.2em' : '1.6em', textDecoration: 'underline', margin: '4px 0'}
+  const workStyle = {fontSize: isSmallScreen ? '1.2em' : '1.6em', color: `rgb(${[90, 172, 235]})`, textDecoration: 'underline', margin: '4px 0'}
   const textStyle = {fontSize: isSmallScreen ? '1.2em' : '1.4em', margin: '4px 0'}
-  const descriptionStyle = {marginBottom: '2em', marginTop: '8px', fontSize: '1.2em'}
+  const descriptionStyle = {fontSize: isSmallScreen ? '1.1em' : '1.2em', marginBottom: '2em', marginTop: '8px'}
   
   return (
     <InfoSection header='EDUCATION'>

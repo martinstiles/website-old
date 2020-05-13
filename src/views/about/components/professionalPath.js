@@ -14,16 +14,18 @@ const SkillHeader = (props) => {
       <div style={hideText}>
         <h1 style={skillStyle}> {props.header} </h1>
       </div>
-      <CircularProgressbar value={percentage} text={`${percentage}%`} styles={buildStyles({ textColor: "white", trailColor: "white"})}/>
+      <CircularProgressbar value={percentage} text={`${percentage}%`} styles={buildStyles({ textColor: `rgb(${[230,230,230,1]})`, trailColor: `rgb(${[230,230,230,1]})`})}/>
     </>
   )
 }
 
 const ProfessionalPath = (props) => {
-  const smallScreen = useMediaQuery('(max-width:1100px)')
+  const mediumScreen = useMediaQuery('(max-width:1100px)')
+  const isSmallScreen = useMediaQuery('(max-width:800px)') // Boolean that is true if screen is 800px or less
+
   const flexBox = {display: 'flex', justifyContent: 'space-around', marginTop: '0%'}
-  const circleStyle = {flex: '33%', maxWidth: smallScreen ? '6em' : '8em', textAlign: 'center', textOverflow: 'ellipsis'}
-  const textStyle = {fontSize: '1.2em'}
+  const circleStyle = {flex: '33%', maxWidth: mediumScreen ? '6em' : '8em', textAlign: 'center', textOverflow: 'ellipsis'}
+  const textStyle = {fontSize: isSmallScreen ? '1.2em' : '1.4em'}
 
   return (
     <InfoSection header='PROFESSIONAL PATH'>
