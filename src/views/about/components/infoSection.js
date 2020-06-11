@@ -4,7 +4,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 const InfoSection = (props) => {
   const isSmallScreen = useMediaQuery('(max-width:800px)') // Boolean that is true if screen is 800px or less
 
-  const sectionStyle = {display: 'flex', flexDirection: isSmallScreen ? 'column' : 'row' , textAlign: 'left', margin: '0 5% 5% 5%'}
+  const sectionStyle = {display: 'flex', flexDirection: isSmallScreen ? 'column' : 'row' , textAlign: 'left', margin: '0 5% 3% 5%'}
   const header = {fontSize: isSmallScreen ? '1.8em' : '2em', marginBottom: 0}
 
   return (
@@ -15,7 +15,7 @@ const InfoSection = (props) => {
       <div style={{flex: '35%', ...(isSmallScreen && {textAlign: 'center'})}}>
         <h1 style={header}> {props.header} </h1>
       </div>
-      <div style={{flex: '65%', margin: isSmallScreen ? 0 : '0 1% 0 3%', fontFamily: 'Helvetica'}}>
+      <div style={{flex: '65%', margin: isSmallScreen ? 0 : '0 1% 0 3%'}}>
         {props.children}
       </div>
     </div>

@@ -9,7 +9,7 @@ const Eduaction = () => {
   const titleStyle = {fontSize: isSmallScreen ? '1.5em' : '2em', marginBottom: '2px'}
   const workStyle = {fontSize: isSmallScreen ? '1.2em' : '1.6em', color: `rgb(${[90, 172, 235]})`, textDecoration: 'underline', margin: '4px 0'}
   const textStyle = {fontSize: isSmallScreen ? '1.2em' : '1.4em', margin: '4px 0'}
-  const descriptionStyle = {fontSize: isSmallScreen ? '1.1em' : '1.2em', marginBottom: '2em', marginTop: '8px'}
+  const descriptionStyle = {fontSize: isSmallScreen ? '1.1em' : '1.2em', marginBottom: '1em', marginTop: '8px'}
   
   return (
     <InfoSection header='EDUCATION'>
