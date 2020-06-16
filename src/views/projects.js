@@ -58,7 +58,7 @@ const Projects = () => {
 					{ isSmallScreen && <p> NB: These projects might not be optimized for small screens! </p> }
 					<ProjectBox
 						image={AlgorithmVisualizer}
-						desc={'Visualizing path finding algorithms with Javascript (React)'}
+						desc={'Visualizing pathfinding algorithms with Javascript (React)'}
 						githubLink={'https://github.com/martinstiles/pathfinding-visualizer/'}
 						projectLink='https://martinstiles.github.io/pathfinding-visualizer/'
 					/>
