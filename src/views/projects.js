@@ -80,7 +80,7 @@ const Projects = () => {
 				<ProjectSection type={'professional'} isSmallScreen={isSmallScreen}>
 					<ProjectBox
 						image={StriseImage}
-						desc={'Front end development for Strise'}
+						desc={'Front end development at Strise'}
 						projectLink='https://strise.ai/'
 					/>
 				</ProjectSection>
