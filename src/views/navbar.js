@@ -17,7 +17,7 @@ const Navbar = ({setPageInParent}) => {
     setPageInParent(page)
     sessionStorage.setItem('initialMount', 'false')
   }
-  // sessionStorage to decide style of components
+  // sessionStorage to check if it is the initial mount
   if (isHome) sessionStorage.setItem('visited', 'false') // for About and Projects
   const initialMount = () => sessionStorage.getItem('initialMount') !== 'false' // for Navbar
 

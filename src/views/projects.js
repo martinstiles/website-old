@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import '../animations/fadeIn.css'
 import ProjectSection from './projects/projectSection'
@@ -6,7 +6,8 @@ import ProjectBox from './projects/components/projectBox'
 // IMAGES FOR PROJECTS
 import StriseImage from '../media/strise.png'
 import RobotImage from '../media/robotProject.png'
-import AlgorithmVisualizer from '../media/pathfindingVisualizer.png'
+import AlgorithmVisualizer from '../media/pathfindingVisualizer.gif'
+import SortingVisualizer from '../media/sortingVisualizer.gif'
 
 
 const Projects = () => {
@@ -57,9 +58,15 @@ const Projects = () => {
 					{ isSmallScreen && <p> NB: These projects might not be optimized for small screens! </p> }
 					<ProjectBox
 						image={AlgorithmVisualizer}
-						desc={'Visualizing path finding algorithms with Javascript'}
+						desc={'Visualizing path finding algorithms with Javascript (React)'}
 						githubLink={'https://github.com/martinstiles/pathfinding-visualizer/'}
 						projectLink='https://martinstiles.github.io/pathfinding-visualizer/'
+					/>
+					<ProjectBox
+						image={SortingVisualizer}
+						desc={'Visualizing sorting algorithms with Javascript (React)'}
+						githubLink={'https://github.com/martinstiles/sorting-visualizer/'}
+						projectLink='https://martinstiles.github.io/sorting-visualizer/'
 					/>
 					<ProjectBox
 						image={RobotImage}

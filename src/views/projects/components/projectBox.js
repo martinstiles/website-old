@@ -29,12 +29,14 @@ const ProjectBox = (props) => {
       <img onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} style={imageStyle} src={props.image} alt='' />
       <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={'hiddenInfo'} style={hover ? {opacity: 1, width: '23em', padding: '5px'} : {opacity: 0, visibility: 'hidden'}}>
         <h1 style={{fontSize: '1.5em'}}> {props.desc} </h1>
-        <Button onClick={() => setHover(false)} variant="contained" color="primary" disabled={!props.githubLink || !hover} href={props.githubLink} target='_blank' style={{marginRight: '5px'}}>
-          Go to repo <GitHubIcon style={{marginLeft: '6px'}} />
-        </Button>
-        <Button onClick={() => setHover(false)} disabled={!hover} variant="contained" color="primary" href={props.projectLink} target='_blank'>
-          See project <OpenInNewIcon style={{marginLeft: '5px'}} />
-        </Button>
+        <div style={{marginBottom: '1em'}}>
+          <Button onClick={() => setHover(false)} variant="contained" color="primary" disabled={!props.githubLink || !hover} href={props.githubLink} target='_blank' style={{marginRight: '5px'}}>
+            Go to repo <GitHubIcon style={{marginLeft: '6px'}} />
+          </Button>
+          <Button onClick={() => setHover(false)} disabled={!hover} variant="contained" color="primary" href={props.projectLink} target='_blank'>
+            See project <OpenInNewIcon style={{marginLeft: '5px'}} />
+          </Button>
+        </div>
       </div>
     </div>
   )
