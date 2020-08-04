@@ -1,7 +1,8 @@
 import React from 'react'
 import Image from '../../media/fb_image.jpg'
 import ProfessionalPath from './components/professionalPath'
-import WorkExperience from './components/workExperience'
+import WorkExperienceIT from './components/workExperienceIT'
+import WorkExperienceOther from './components/workExperienceOther'
 import Education from './components/education'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
@@ -29,7 +30,8 @@ const Box = () => {
 
       <ProfessionalPath />
       <Education />
-      <WorkExperience />
+      <WorkExperienceIT />
+      <WorkExperienceOther />
       <hr style={{width: '90%', border: `2px solid`, borderRadius: '5px'}} />
     </div>
   )

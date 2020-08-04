@@ -18,7 +18,7 @@ const ButtonGroupSmall = (props) => {
       <Menu anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={() => handleMoreClose(props.currentPage)}>
         <MenuItem onClick={() => handleMoreClose('home')}> <p style={{...(props.currentPage === 'home' && {color: '#ccc'})}}> HOME </p> </MenuItem>
         <MenuItem onClick={() => handleMoreClose('about')}> <p style={{...(props.currentPage === 'about' && {color: '#ccc'})}}> ABOUT </p> </MenuItem>
-        <MenuItem onClick={() => handleMoreClose('projects')}> <p style={{...(props.currentPage === 'projects' && {color: '#ccc'})}}> PORTFOLIO </p> </MenuItem>
+        <MenuItem onClick={() => handleMoreClose('projects')}> <p style={{...(props.currentPage === 'projects' && {color: '#ccc'})}}> PROJECTS </p> </MenuItem>
       </Menu>
     </>
   )

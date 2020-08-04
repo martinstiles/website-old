@@ -25,10 +25,8 @@ const Navbar = ({setPageInParent}) => {
   const isSmallScreen = useMediaQuery('(max-width:800px)')
 
   const fontColor = `rgb(${[230,230,230,1]})`
-  const width = isHome ? '22%' : '16%'
   const leftMarginVertical = isHome ? '39%' : '0%'
   const verticalStyle = {
-    width,
     height: '100%',
     position: 'fixed',
     zIndex: 2,
@@ -46,6 +44,7 @@ const Navbar = ({setPageInParent}) => {
   const height = isHome ? '100%' : '10%'
   const opacity = isHome ? 0.8 : 1
   const horizontalStyle = {
+    float: 'center',
     width: '100%',
     height,
     position: 'fixed',
@@ -62,13 +61,12 @@ const Navbar = ({setPageInParent}) => {
 
   // Header style
   const header = {
-    // Own size for "projects" as the word is long af
-    fontSize: isSmallScreen ? '3em' : currentPage === 'projects' ? `calc(${0.5}em + ${2}vw)` : `calc(${1.5}em + ${1.5}vw)`,
+    // Own size for "Welcome" to make it extra spicy
+    fontSize: isSmallScreen ? '2em' : currentPage === 'home' ? `calc(${0.5}em + ${2.5}vw)` : `calc(${0.5}em + ${2}vw)`,
     fontWeight: 'bold',
-    marginTop: isSmallScreen ? '8%' : '3vw',
+    marginTop: '3vw',
   }
-  // TODO: FIX THIS!!! MAKE IT ALWAYS IN THE MIDDLE (VERTICALLY)
-  const phoneHeader = {fontSize: '2em', marginTop: '4.5vw', marginLeft: '5%'}
+  const phoneHeader = isHome ? {fontSize: '3em', marginTop: '8%'} : {fontSize: '2em', marginLeft: '5%'}
 
 
   // Footer style
@@ -80,9 +78,9 @@ const Navbar = ({setPageInParent}) => {
   return (
     <div className={isSmallScreen ? '' : initialMount() ? 'fadeIn' : (isHome ? 'moveRight' : 'moveLeft')} style={isSmallScreen ? horizontalStyle : verticalStyle}>
         {
-          (isSmallScreen && !isHome)
+          (isSmallScreen)
           ?
-          <h1 style={phoneHeader}> {currentPage.toUpperCase()} </h1>
+          <h1 style={phoneHeader}> { isHome ? 'WELCOME' : currentPage.toUpperCase()} </h1>
           :
           <h1 style={header}> { isHome ? 'WELCOME' : currentPage.toUpperCase()} </h1>
         }
@@ -96,7 +94,8 @@ const Navbar = ({setPageInParent}) => {
         }
 
         {
-          (isSmallScreen && !isHome) ||
+          (isSmallScreen && !isHome)
+          ||
           <div style={footer}>
             <Link style={{color: fontColor}} target='_blank' href='https://www.facebook.com/martin.stiles.9'> <FacebookIcon style={iconStyle}/> </Link>
             <Link style={{color: fontColor, margin: '0 10% 0 10%'}} target='_blank' href='https://www.linkedin.com/in/martin-stiles-39b662171/'> <LinkedInIcon style={iconStyle} /> </Link>

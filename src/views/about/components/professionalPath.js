@@ -41,7 +41,7 @@ const ProfessionalPath = (props) => {
       </p>
       <div style={flexBox}>
         <div style={circleStyle}>
-          <SkillHeader header='WebDev' percentage={80}/>
+          <SkillHeader header='WebDev' percentage={85}/>
         </div>
         <div style={circleStyle}>
           <SkillHeader header='DataSci' percentage={75}/>

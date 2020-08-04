@@ -13,12 +13,12 @@ const Eduaction = () => {
   
   return (
     <InfoSection header='EDUCATION'>
-      <h1 style={titleStyle}> MSc. student in Computer Science </h1>
+      <h1 style={titleStyle}> M.Sc. student in Computer Science </h1>
       <Link target="_blank" color='inherit' variant='inherit' href='https://www.ntnu.no/studier/mtdt'> <h1 style={workStyle}> NTNU </h1> </Link>
       <p style={textStyle}> August 2017 - Present </p>
       <p style={descriptionStyle}>
         5 year integrated Masters degree at the Norwegian University of Science and Technology.
-        Currently specializing in database systems and AI.
+        Currently specializing in database systems, search engines and AI.
       </p>
 
       
