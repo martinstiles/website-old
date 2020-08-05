@@ -12,7 +12,7 @@ const WorkExperienceOther = () => {
   const descriptionStyle = {fontSize: isSmallScreen ? '1.1em' : '1.2em', marginBottom: '1em', marginTop: '8px'}
   
   return (
-    <InfoSection header='WORK EXPERIENCE - Other'>
+    <InfoSection header='WORK EXPERIENCE - OTHER'>
       <h1 style={titleStyle}> RIDER </h1>
       <Link target="_blank" color='inherit' variant='inherit' href='https://www.foodora.com/'> <h1 style={workStyle}> Foodora </h1> </Link>
       <p style={textStyle}> March 2019 - november 2019 </p>
