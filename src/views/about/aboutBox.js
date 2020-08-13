@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from '../../media/fb_image.jpg'
 import ProfessionalPath from './components/professionalPath'
-import WorkExperienceIT from './components/workExperienceIT'
-import WorkExperienceOther from './components/workExperienceOther'
-import Education from './components/education'
+import WorkExperienceIT from './components/experience/workExperienceIT'
+import WorkExperienceOther from './components/experience/workExperienceOther'
+import Education from './components/experience/education'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const Box = () => {
