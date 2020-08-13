@@ -14,7 +14,7 @@ const ExperienceBox = (props) => {
   return (
     <> 
       <h1 style={titleStyle}> {props.title} </h1>
-      <Link target="_blank" color='inherit' variant='inherit' href={props.link}> <h1 style={workStyle}> props.company </h1> </Link>
+      <Link target="_blank" color='inherit' variant='inherit' href={props.link}> <h1 style={workStyle}> {props.company} </h1> </Link>
       <p style={textStyle}> {props.duration}</p>
       <p style={keywordStyle}> {props.keywords} </p>
       <p style={descriptionStyle}> {props.description} </p>
