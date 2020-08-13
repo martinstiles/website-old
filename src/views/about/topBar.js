@@ -48,7 +48,7 @@ const TopBar = () => {
           <LocationOnIcon style={iconStyle} />
         </div>
         <div style={textColumn} >
-          <p style={textRow}> 7068 Trondheim </p>
+          <p style={textRow}> 7030 Trondheim </p>
           <p style={textRow}> Norway </p>
         </div>
       </div>
@@ -68,7 +68,7 @@ const TopBar = () => {
           <MailIcon style={iconStyle} />
         </div>
         <div style={textColumn} >
-          <p style={textRow}> martin.stiles@live.no </p>
+          <p style={textRow}> <a style={{color: `rgb(${[220,220,220,1]})`}} href='mailto:martin.stiles@live.no'>martin.stiles@live.no</a> </p>
           <p style={textRow}> 24 / 7 </p>
         </div>
       </div>
