@@ -7,7 +7,7 @@ import AboutBox from './about/aboutBox'
 const About = () => {
 	const isSmallScreen = useMediaQuery('(max-width:800px)') // Boolean that is true if screen is 600px or less
 	
-	// Checks to see if any other pages than home has been visitet, so the page doesn't fade in when you switch pages
+	// Checks to see if any other pages than home has been visited, so the page doesn't fade in when you switch pages
 	const visit = () => {
 		const visited = sessionStorage.getItem('visited') !== 'true'
 		if (visited) sessionStorage.setItem(`visited`, 'true')

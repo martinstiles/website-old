@@ -3,7 +3,7 @@ import Navbar from './views/navbar'
 import About from './views/about.js'
 import Projects from './views/projects'
 import Background from './media/Background.JPG'
-import Waterfall from './media/tree.jpg'
+import Tree from './media/tree.jpg'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 //TODO: Ha en if (ternary) som gir forskjellig main/navbar? --> JA, for mobil. Det meste må lages på nytt for mobil
@@ -31,7 +31,7 @@ function App() {
     <div style={style} className='app'>
       {
         <div>
-          <img style={imageStyle} src={isSmallScreen ? Waterfall : Background} alt='' />
+          <img style={imageStyle} src={isSmallScreen ? Tree : Background} alt='' />
         </div>
       }
       <Navbar setPageInParent={setCurrentPage}/>
