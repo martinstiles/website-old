@@ -3,6 +3,7 @@ import Link from '@material-ui/core/Link'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import InstagramIcon from '@material-ui/icons/Instagram'
+import GitHubIcon from '@material-ui/icons/GitHub';
 import '../animations/fadeIn.css'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import ButtonGroupBig from './about/components/buttonGroupBig'
@@ -98,8 +99,8 @@ const Navbar = ({setPageInParent}) => {
           ||
           <div style={footer}>
             <Link style={{color: fontColor}} target='_blank' href='https://www.facebook.com/martin.stiles.9'> <FacebookIcon style={iconStyle}/> </Link>
-            <Link style={{color: fontColor, margin: '0 10% 0 10%'}} target='_blank' href='https://www.linkedin.com/in/martin-stiles-39b662171/'> <LinkedInIcon style={iconStyle} /> </Link>
-            <Link style={{color: fontColor}} target='_blank' href='https://www.instagram.com/msstiles/'> <InstagramIcon style={iconStyle}/> </Link>
+            <Link style={{color: fontColor, margin: '0 10% 0 10%'}} target='_blank' href='https://github.com/martinstiles'> <GitHubIcon style={iconStyle}/> </Link>
+            <Link style={{color: fontColor}} target='_blank' href='https://www.linkedin.com/in/martin-stiles-39b662171/'> <LinkedInIcon style={iconStyle} /> </Link>
           </div>
         }
     </div>
