@@ -17,7 +17,7 @@ const ProjectBox = (props) => {
     height: '20em',
     boxShadow: `8px 8px 5px 0 rgb(${[0,0,0,0.2]})`,
     borderRadius: '5px',
-    transition: '.5s ease',
+    transition: '.3s ease',
     // If hovering:
     transform: hover && `scale(${1.2})`,
     opacity: hover && 0.3
@@ -27,7 +27,7 @@ const ProjectBox = (props) => {
   return (
     <div style={boxStyle}>
       <img onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} style={imageStyle} src={props.image} alt='' />
-      <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={'hiddenInfo'} style={hover ? {opacity: 1, width: '23em', padding: '5px'} : {opacity: 0, visibility: 'hidden'}}>
+      <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={hover ? 'hidden-info-in' : 'hidden-info-out'} style={hover ? {opacity: 1, width: '23em', padding: '5px'} : {opacity: 0, visibility: 'hidden'}}>
         <h1 style={{fontSize: '1.5em'}}> {props.desc} </h1>
         <div style={{marginBottom: '1em'}}>
           <Button onClick={() => setHover(false)} variant="contained" color="primary" disabled={!props.githubLink || !hover} href={props.githubLink} target='_blank' style={{marginRight: '5px'}}>
