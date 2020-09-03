@@ -26,7 +26,7 @@ const WorkExperienceIT = () => {
         duration='January 2020 - May 2020 '
         keywords='Keywords: Mentoring, SQL, ER diagrams, normalizing theory'
         description='Student assistant in the course TDT4145: Data Modelling and Database Systems.
-        It was a joy helping other students professionally.'
+        It was a great joy helping other students professionally. I usually spent more time than I was paid for just for the fun of it.'
       />
     </InfoSection>
   )
