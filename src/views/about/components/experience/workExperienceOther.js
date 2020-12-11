@@ -6,10 +6,17 @@ const WorkExperienceOther = () => {
   return (
     <InfoSection header='WORK EXPERIENCE - OTHER'>
       <ExperienceBox
+        title='TEACHING MENTOR'
+        link='https://innsida.ntnu.no/veiledning'
+        company='NTNU'
+        duration='Oktober 2020 - December 2020'
+        description='Mentoring a student with a functional disability in the course TMA4145 Discrete Mathematics'
+      />
+      <ExperienceBox
         title='RIDER'
         link='https://www.foodora.com/'
         company='Foodora'
-        duration='March 2019 - november 2019'
+        duration='March 2019 - November 2019'
         description='Food delivery cyclist. A mix of exercise and income was a great combination for a part time job.'
       />
       <ExperienceBox
