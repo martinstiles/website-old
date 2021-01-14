@@ -8,6 +8,7 @@ import StriseImage from '../media/strise.png'
 import RobotImage from '../media/robotProject.png'
 import AlgorithmVisualizer from '../media/pathfindingVisualizer.gif'
 import SortingVisualizer from '../media/sortingVisualizer.gif'
+import ClusteringVisualizer from '../media/clusteringVisualizer.gif'
 
 
 const Projects = () => {
@@ -61,6 +62,12 @@ const Projects = () => {
 						desc={'Visualizing pathfinding algorithms with Javascript (React)'}
 						githubLink={'https://github.com/martinstiles/pathfinding-visualizer/'}
 						projectLink='https://martinstiles.github.io/pathfinding-visualizer/'
+					/>
+					<ProjectBox
+						image={ClusteringVisualizer}
+						desc={'Visualizing clustering algorithms with Javascript (React)'}
+						githubLink={'https://github.com/martinstiles/clustering-visualizer/'}
+						projectLink='https://martinstiles.github.io/clustering-visualizer/'
 					/>
 					<ProjectBox
 						image={SortingVisualizer}
