@@ -9,8 +9,8 @@ const WorkExperienceOther = () => {
         title='TEACHING MENTOR'
         link='https://innsida.ntnu.no/veiledning'
         company='NTNU'
-        duration='Oktober 2020 - December 2020'
-        description='Mentoring a student with a functional disability in the course TMA4145 Discrete Mathematics'
+        duration='Oktober 2020 - present'
+        description='Mentoring a student with a functional disability in the courses TMA4145 - Discrete Mathematics and TDT4113 - Programming Project.'
       />
       <ExperienceBox
         title='RIDER'
