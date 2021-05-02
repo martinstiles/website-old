@@ -17,7 +17,7 @@ const WorkExperienceOther = () => {
         link='https://www.foodora.com/'
         company='Foodora'
         duration='March 2019 - November 2019'
-        description='Food delivery cyclist. A mix of exercise and income was a great combination for a part time job.'
+        description='Food delivery cyclist. A mix of exercise and income was a great combination for a part time job while studying.'
       />
       <ExperienceBox
         title='BARTENDER'
